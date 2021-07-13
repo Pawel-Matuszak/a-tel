@@ -1,9 +1,10 @@
 import React from "react";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <h1>Test committtt</h1>
+      <Footer/>
     </div>
   );
 }
