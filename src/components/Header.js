@@ -1,7 +1,22 @@
+import "./Header.css"
+import logo from "../logo.png";
 const header = () => {
     return (
         <header>
-            
+            <div className="header-container">
+                <div className="nav">
+                    <div className="logo">
+                        <img src={logo} alt=""/>
+                    </div>
+                    <ul className="nav-links">
+                        <li><a href="#">Strona główna</a></li>
+                        <li><a href="#">O nas</a></li>
+                        <li><a href="#">Referencje</a></li>
+                        <li><a href="#">Nasz sprzęt</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
         </header>
     )
 }
