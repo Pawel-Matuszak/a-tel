@@ -6,8 +6,11 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
-  background-color: #052957;
+  background: transparent;
   font-family: "Montserrat", sans-serif;
+}
+.header-container {
+  min-height: 125px;
 }
 a {
   text-decoration: none;
@@ -34,7 +37,7 @@ ul {
   align-items: center;
   margin-right: 2rem;
 }
-li:not(:first-child) {
+li {
   margin-left: 2.5rem;
 }
 a {
@@ -44,4 +47,10 @@ a {
 }
 a:hover {
   opacity: 1;
+}
+
+@media screen and (max-width: 965px) {
+  ul {
+    display: none;
+  }
 }

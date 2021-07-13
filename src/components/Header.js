@@ -1,4 +1,6 @@
-import "./Header.css"
+import React from "react";
+import Particles from 'react-particles-js';
+import "./Header.css";
 import logo from "../logo.png";
 const header = () => {
     return (
