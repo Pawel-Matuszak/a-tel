@@ -20,14 +20,15 @@ const Footer = () => {
         <div className="contact">
           <h2>Kontakt</h2>
           <ul>
-            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faPhoneAlt}/><span>777 777 777</span></li>
-            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faEnvelope}/><span>atel@gmail.com</span></li>
-            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faHome}/><span>Opole, ul. Wolności 99</span></li>
+            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faPhoneAlt}/><span><p>Asystentka:</p> +48 531 998 371</span></li>
+            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faEnvelope}/><span><p>Asystentka:</p> agnieszka.pierzga@a-tel.com.pl</span></li>
+            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faEnvelope}/><span><p>Biuro:</p> biuro@a-tel.com.pl</span></li>
+            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faHome}/><span>Wolności 99, 45-920 Opole</span></li>
           </ul>
         </div>
         <div className="about-us">
           <h2>O nas</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tenetur recusandae repellendus dolores, similique quidem?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tenetur recusandae repellendus dolores, similique quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, voluptas et dignissimos nihil labore necessitatibus?</p>
         </div>
       </div>
 
