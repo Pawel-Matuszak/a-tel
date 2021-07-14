@@ -1,38 +1,55 @@
 import React, { useState, useRef } from 'react'
+import axios from 'axios'
 
 const ContactForm = () => {
 
-  const errorMsg = useRef(null)
   const [email, setEmail] = useState('');
   const [topic, setTopic] = useState('');
   const [content, setContent] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
-  const maxContentLength = 350
+  const [errorMsg, setErrorMsg] = useState('')
+  const [msgSend, setMsgSend] = useState(false)
 
-  const sendEmail = (e) => {
+  const maxContentLength = 350
+  const PATH = "http://127.0.0.1/index.php";
+
+  const  formSubmit = async (e) => {
     e.preventDefault();
     
     if(email.length<=0 || !email.includes("@")){
-      errorMsg.current.innerHTML = "Proszę wpisać poprawny adres email"
+      setErrorMsg("Proszę wpisać poprawny adres email")
       return;
     }
 
     if(topic.length<=0){
-      errorMsg.current.innerHTML = "Proszę wpisać temat wiadomości"
+      setErrorMsg("Proszę wpisać temat wiadomości")
       return;
     }
 
     if(content.length<=0){
-      errorMsg.current.innerHTML = "Proszę wpisać treść wiadomości"
+      setErrorMsg("Proszę wpisać treść wiadomości")
       return;
     }
 
-    errorMsg.current.innerHTML = "";
-    console.log({email, topic, content: content});
+    try {
+      const { data } = await axios({
+        method: 'post',
+        url: `${PATH}`,
+        headers: { 'content-type': 'application/json' },
+        data: {email, topic, content}
+      })
+      
+      console.log(data);
+      setMsgSend(true);
+      setErrorMsg("Wiadomość wysłana");
+
+    } catch (error) {
+      setErrorMsg("Wystąpił błąd, spróbuj ponownie poźniej")
+    }
   }
 
   return (
-    <form onSubmit={sendEmail}>
+    <form onSubmit={formSubmit} method="post">
       <input type="text" id="email" name="email" placeholder="Adres e-mail" value={email} onChange={(e) => setEmail(e.target.value)}></input>
       <input type="text" id="topic" name="topic" placeholder="Temat" maxLength="55" value={topic} onChange={(e) => setTopic(e.target.value)}></input>
       <textarea 
@@ -49,7 +66,7 @@ const ContactForm = () => {
       </textarea>
       <span className="charCount">{characterCount}/{maxContentLength}</span>
       
-      <span className="error-msg" ref={errorMsg}></span>
+      <span className="error-msg" style={{color: msgSend ? "#52CC2D" : "#CC8719"}}>{errorMsg}</span>
 
       <button type="submit">Wyślij</button>
     </form>
