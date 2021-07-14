@@ -22,18 +22,18 @@
   position: relative;
   z-index: 10;
 }
-.title {
+.right .about-title {
   width: 100%;
   padding-left: 5%;
 }
-.rect {
+.right .about-title .rect {
   background-color: #073a7d;
   width: 200px;
   height: 15px;
   position: relative;
   bottom: 2rem;
 }
-.rect2 {
+.right .about-title .rect2 {
   margin-left: 1rem;
   background-color: #1f63bc;
 }
