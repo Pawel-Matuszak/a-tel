@@ -32,5 +32,6 @@ canvas {
 }
 
 .tsparticles-canvas-el {
-  height: calc(100vh - 125px) !important;
+  position: absolute;
+  top: 0;
 }

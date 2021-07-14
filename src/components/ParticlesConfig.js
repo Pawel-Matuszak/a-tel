@@ -1,15 +1,23 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Particles from 'react-particles-js'
 import "./ParticlesStyle.css"
 const ParticlesConfig = () => {
-    return (
+  const [size, setSize] = useState(window.innerWidth); 
+  function checkSize () {
+    setSize(window.innerWidth)
+  }
+  useEffect( () => {
+    window.addEventListener("resize", checkSize)
+  },[] )    
+  return (
         <Particles
+        
             params={{
               "particles": {
     "number": {
-      "value": 160,//Quantity
+      "value": 0.03*size,//Quantity
       "density": {
-        "enable": true, //Enable the density of particles
+        "enable": false, //Enable the density of particles
         "value_area": 800 //Regional distribution density
       }
     },
@@ -53,10 +61,10 @@ const ParticlesConfig = () => {
     },
     "line_linked": {
       "enable": true, //Connecting line
-      "distance": 150, //Connecting line distance
+      "distance": 350, //Connecting line distance
       "color": "#ffffff", //Connecting line color
       "opacity": 0.4, //Connecting line opacity
-      "width": .5 //The width of the connecting line
+      "width": .2 //The width of the connecting line
     },
     "move": {
       "enable": true, //Atomic move
@@ -80,6 +88,11 @@ const ParticlesConfig = () => {
         "enable": true, //Hover
         "mode": "bubble" //Hover mode "grab" grabs nearby, "bubble" bubble ball effect, "repulse" knockback effect, ["grab", "bubble"]
       },
+      "onresize": {
+       "enable": true,
+        "density_auto": true,
+        "density_area": 400 // nb_particles = particles.nb * (canvas width *  canvas height / 1000) / density_area
+      },
       "onclick": {
         "enable": false,  //Click effect
         "mode": "repulse"  //Click the effect mode "push" ,"remove" ,"bubble" ,"repulse" ,["push", "repulse"]
@@ -90,7 +103,7 @@ const ParticlesConfig = () => {
       "grab": {
         "distance": 100, //Atomic interaction grab distance
         "line_linked": { 
-          "opacity": 0.8  //Atomic interactive capture distance connection opacity
+          "opacity": 0.1  //Atomic interactive capture distance connection opacity
         }
       },
       "bubble": {

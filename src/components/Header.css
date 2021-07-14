@@ -16,7 +16,7 @@ header {
   z-index: 999;
 }
 .header-container {
-  min-height: 125px;
+  height: 125px;
 }
 .header-container .nav {
   display: flex;
