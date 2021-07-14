@@ -7,10 +7,10 @@ import Button from "./Components/Button"
 function App() {
   return (
     <div className="App">
-      {/* <Contact/>
+      <Contact/>
       <Map/>
-      <Footer/> */}
-      <Button link="#" content={"Kliknij tutaj"}/>
+      <Footer/>
+      {/* <Button link="#" content={"Kliknij tutaj"}/> */}
     </div>
   );
 }
