@@ -2,6 +2,7 @@ import React from 'react'
 import L from 'leaflet'
 import { MapContainer, TileLayer, Marker, Tooltip } from 'react-leaflet'
 import icon from "../icon.png"
+import './map.css'
 
 //Create icon
 const GetIcon = (iconWidth, iconHeight) =>{

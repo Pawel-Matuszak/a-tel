@@ -2,6 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPhoneAlt, faEnvelope, faHome} from "@fortawesome/free-solid-svg-icons"
 import ContactForm from './ContactForm'
+import './contact.css'
 
 
 const Contact = () => {
