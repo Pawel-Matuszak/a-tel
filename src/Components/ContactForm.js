@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 
 const ContactForm = () => {
 
+  const errorMsg = useRef(null)
   const [email, setEmail] = useState('');
   const [topic, setTopic] = useState('');
   const [content, setContent] = useState('');
@@ -10,13 +11,30 @@ const ContactForm = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log("Form submitted");
+    
+    if(email.length<=0 || !email.includes("@")){
+      errorMsg.current.innerHTML = "Proszę wpisać poprawny adres email"
+      return;
+    }
+
+    if(topic.length<=0){
+      errorMsg.current.innerHTML = "Proszę wpisać temat wiadomości"
+      return;
+    }
+
+    if(content.length<=0){
+      errorMsg.current.innerHTML = "Proszę wpisać treść wiadomości"
+      return;
+    }
+
+    errorMsg.current.innerHTML = "";
+    console.log({email, topic, content: content});
   }
 
   return (
-    <form>
+    <form onSubmit={sendEmail}>
       <input type="text" id="email" name="email" placeholder="Adres e-mail" value={email} onChange={(e) => setEmail(e.target.value)}></input>
-      <input type="text" id="topic" name="topic" placeholder="Temat" value={topic} onChange={(e) => setTopic(e.target.value)}></input>
+      <input type="text" id="topic" name="topic" placeholder="Temat" maxLength="55" value={topic} onChange={(e) => setTopic(e.target.value)}></input>
       <textarea 
         id="content" 
         name="content" 
@@ -30,8 +48,10 @@ const ContactForm = () => {
         }}>
       </textarea>
       <span className="charCount">{characterCount}/{maxContentLength}</span>
+      
+      <span className="error-msg" ref={errorMsg}></span>
 
-      <button type="submit" onClick={sendEmail}>Wyślij</button>
+      <button type="submit">Wyślij</button>
     </form>
   )
 }
