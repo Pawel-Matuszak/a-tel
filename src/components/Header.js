@@ -1,8 +1,7 @@
 import React from "react";
-import Particles from 'react-particles-js';
 import "./Header.css";
 import logo from "../logo.png";
-const header = () => {
+const Header = () => {
     return (
         <header>
             <div className="header-container">
@@ -22,5 +21,4 @@ const header = () => {
         </header>
     )
 }
-
-export default header
+export default Header

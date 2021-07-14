@@ -11,20 +11,20 @@
 body {
   background-color: #052957;
 }
-section {
+.TextContainer {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-h1,
-h2 {
+.TextContainer h1,
+.TextContainer h2 {
   text-align: center;
 }
-h1 {
+.TextContainer h1 {
   font-size: 4.5rem;
 }
-h2 {
+.TextContainer h2 {
   font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 500;
