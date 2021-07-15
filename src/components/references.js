@@ -1,4 +1,6 @@
 import React from 'react'
+import Button from "./Button"
+
 import "./References.css"
 import "./button.css"
 const References = () => {
@@ -15,7 +17,7 @@ const References = () => {
                 <div className="references-rec references-rec-right"></div>
                 </div>
                 <div className="references-button">
-                    <a href= "#" className="link-btn">Zobacz więcej</a>
+                    <Button type={"a"} content={"Zobacz więcej"}/>
                 </div>
         </section>
     )

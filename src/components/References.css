@@ -54,6 +54,7 @@
 .references-button {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-top: 3rem;
 }
 .references-button a {
