@@ -11,7 +11,7 @@
 body {
   background-color: #052957;
 }
-.TextContainer {
+.textContainer {
   height: 100vh;
   width: 100%;
 }
@@ -21,14 +21,14 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.TextContainer h1,
-.TextContainer h2 {
+.textContainer h1,
+.textContainer h2 {
   text-align: center;
 }
-.TextContainer h1 {
+.textContainer h1 {
   font-size: 4.5rem;
 }
-.TextContainer h2 {
+.textContainer h2 {
   font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 500;

@@ -3,11 +3,12 @@
   height: 100vh;
   margin-top: 5rem;
   display: grid;
+  grid-auto-flow: row;
   grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
   grid-template-rows: 1fr;
 }
 .equipment-container .left {
-  background-image: url(../about.png);
+  background-image: url(../equipment.png);
   background-size: cover;
   background-position: center center;
 }
@@ -45,7 +46,11 @@
 
 @media screen and (max-width: 1200px) {
   .equipment-container {
+    grid-auto-flow: row dense;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+  }
+  .equipment-container .right {
+    grid-row-start: 2;
   }
 }

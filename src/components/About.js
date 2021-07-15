@@ -1,6 +1,5 @@
 import React from 'react'
 import "./About.css"
-import about from '../about.png'
 const About = () => {
     return (
         <section className="about-container">
