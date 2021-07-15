@@ -1,7 +1,7 @@
 import React from 'react'
 import "./References.css"
 import "./button.css"
-const references = () => {
+const References = () => {
     return (
         <section className="references-container" id="references">
             <div className="references-title">
@@ -21,4 +21,4 @@ const references = () => {
     )
 }
 
-export default references
+export default References
