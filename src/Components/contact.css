@@ -4,15 +4,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: top;
   background: #073A7D;
   font-size: 1.05rem;
-  min-height: 70vh;
+  min-height: 65vh;
   font-weight: 600;
 }
 
 .contact-info{
-  padding: 3.5rem 2rem;
+  padding: 4rem 2rem;
 }
 
 .contact-info-list li .fontAwesomeIcon{
@@ -24,11 +24,6 @@
   transition: transform .2s ease-in-out;
 }
 
-.contact-info-list li:hover{
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
 .contact-info-list li span p{
   font-weight: 400;
 }
@@ -38,7 +33,7 @@ form{
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  padding: 3.5rem 0;
+  padding: 4rem 0;
   position: relative;
 }
 
@@ -81,9 +76,15 @@ button[type="submit"]:hover{
   cursor: pointer;
 }
 
+.textArea{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
 .charCount{
   position: absolute;
-  bottom:29%;
+  top:80%;
   right:13%;
   z-index: 99;
   color: #707070;
@@ -93,4 +94,25 @@ button[type="submit"]:hover{
   color: #CC8719;
   font-size: 1rem;
   font-weight: 600;
+}
+
+.success-msg{
+  color: #52CC2D;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem;
+}
+
+.loading-screen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
+  z-index: 999;
 }

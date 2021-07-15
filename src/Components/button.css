@@ -1,13 +1,10 @@
 .link-btn{
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-
+  position: relative;
   padding: 1rem 2rem;
   border: 1px solid white;
   font-weight: 300;
   letter-spacing: 1px;
+  display: block;
 }
 
 .link-btn::after{
@@ -19,9 +16,9 @@
   height: 100%;
   background: rgb(255, 255, 255);
   transition: transform .1s ease-in;
-  z-index: -1;
   transform: scaleY(0);
   transform-origin: top center;
+  z-index: -1;
 }
 
 .link-btn:hover::after{
@@ -30,5 +27,6 @@
 }
 
 .link-btn:hover{
+  cursor: pointer;
   color: #073A7D;
 }
