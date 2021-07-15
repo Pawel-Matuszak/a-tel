@@ -10,7 +10,6 @@ function App() {
       <Contact/>
       <Map/>
       <Footer/>
-      {/* <Button link="#" content={"Kliknij tutaj"}/> */}
     </div>
   );
 }

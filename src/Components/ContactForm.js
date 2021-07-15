@@ -4,6 +4,11 @@ import Button from './Button';
 
 const ContactForm = () => {
 
+  //const
+  const maxContentLength = 350
+  const maxTopicLength = 55
+  const PATH = "http://127.0.0.1/index.php";
+
   const [email, setEmail] = useState('');
   const [topic, setTopic] = useState('');
   const [content, setContent] = useState('');
@@ -12,30 +17,32 @@ const ContactForm = () => {
   const [loading, setLoading] = useState(false)
   const [msgSend, setMsgSend] = useState(false)
 
-  const maxContentLength = 350
-  const PATH = "http://127.0.0.1/index.php";
-
+  //submit handler
+  //returns error if request failed to be sent
+  //disables send button if it was pressed once and request was send
   const  formSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true)
+    setLoading(true);
+
+    //If form has been filled correctly
     if(email.length<=0 || !email.includes("@")){
       setErrorMsg("Proszę wpisać poprawny adres email");
       setMsgSend(false);
-      setLoading(false)
+      setLoading(false);
       return;
     }
 
-    if(topic.length<=0){
+    if(topic.length<=0 || topic.length>maxTopicLength){
       setErrorMsg("Proszę wpisać temat wiadomości")
       setMsgSend(false);
-      setLoading(false)
+      setLoading(false);
       return;
     }
 
-    if(content.length<=0){
+    if(content.length<=0 || content.length>maxContentLength){
       setErrorMsg("Proszę wpisać treść wiadomości")
       setMsgSend(false);
-      setLoading(false)
+      setLoading(false);
       return;
     }
 
@@ -45,26 +52,26 @@ const ContactForm = () => {
         url: `${PATH}`,
         headers: { 'content-type': 'application/json' },
         data: {email, topic, content}
-      })
+      });
       
       console.log(data);
       if(!data.status){
-        throw "Wystąpił błąd komunikacji z serwerem"
+        throw "Wystąpił błąd komunikacji z serwerem";
       }
       setMsgSend(data.status);
-      setLoading(false)
+      setLoading(false);
       setErrorMsg("");
 
     } catch (error) {
-      setErrorMsg("Wystąpił błąd, spróbuj ponownie poźniej")
-      setLoading(false)
+      setErrorMsg("Wystąpił błąd, spróbuj ponownie poźniej");
+      setLoading(false);
     }
   }
 
   return (
     <form onSubmit={formSubmit} method="post">
       <input type="text" id="email" name="email" placeholder="Adres e-mail" value={email} onChange={(e) => setEmail(e.target.value)}></input>
-      <input type="text" id="topic" name="topic" placeholder="Temat" maxLength="55" value={topic} onChange={(e) => setTopic(e.target.value)}></input>
+      <input type="text" id="topic" name="topic" placeholder="Temat" maxLength={maxTopicLength} value={topic} onChange={(e) => setTopic(e.target.value)}></input>
       <div className="textArea">
         <textarea 
           id="content" 
@@ -84,7 +91,9 @@ const ContactForm = () => {
       
       <span className="error-msg">{errorMsg}</span>
       {loading && <span className="loading-screen">Loading</span>}
-      {msgSend ? <span className="success-msg" style={{color: "#52CC2D"}}>Wiadomość wysłana</span> : <button type="submit">Wyślij</button>}
+      {msgSend ? <span className="success-msg" style={{color: "#52CC2D"}}>Wiadomość wysłana</span> : <Button type="submit" content={"Wyślij"} link="#"/>}
+      
+
     </form>
   )
 }
