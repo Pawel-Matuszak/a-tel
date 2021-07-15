@@ -1,17 +1,12 @@
 .link-btn {
   position: relative;
-  transform: translate(0, 0);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 1rem 2rem;
   border: 1px solid white;
   font-weight: 300;
   letter-spacing: 1px;
-  background: transparent;
-  outline: none;
-  color: #eeeeee;
-  font-weight: 500;
-  font-size: 1rem;
-  border-radius: 2px;
-  margin: .5rem;
 }
 
 .link-btn::after {
@@ -25,7 +20,7 @@
   transition: transform 0.1s ease-in;
   z-index: -1;
   transform: scaleX(0);
-  transform-origin: center right;
+  transform-origin: top right;
 }
 
 .link-btn:hover::after {
@@ -34,6 +29,5 @@
 }
 
 .link-btn:hover {
-  cursor: pointer;
   color: #073a7d;
 }
