@@ -10,7 +10,7 @@ const Contact = () => {
     <section id="contact">
       <div className="contact-container">
         <div className="contact-info">
-          <h2>Kontakt</h2>
+          <h2 className="section-title">Kontakt</h2>
           <ul className="contact-info-list">
             <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faPhoneAlt}/><span><p>Właściciel firmy:</p> +48 790 221 144</span></li>
             <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faPhoneAlt}/><span><p>Asystentka:</p> +48 531 998 371</span></li>

@@ -6,9 +6,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 body {
   color: #eeee;
   font-family: "Montserrat", sans-serif;
@@ -38,9 +38,7 @@ header {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-.header-container .nav img:hover {
-  transform: scale(1.1);
-}
+
 .header-container ul {
   display: flex;
   align-items: center;
@@ -64,7 +62,7 @@ header {
   font-size: 2.5rem;
   display: none;
 }
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1136px) {
   .header-container .nav {
     justify-content: center;
     flex-direction: column;

@@ -33,7 +33,6 @@ const Map = () => {
         <Tooltip direction="right" offset={[0, 0]} opacity={1} permanent>
           <span className="tooltip-label">Znajdziesz nas tutaj</span>
         </Tooltip>
-        {/* <Popup></Popup> */}
       </Marker>
     </MapContainer>
   </div>

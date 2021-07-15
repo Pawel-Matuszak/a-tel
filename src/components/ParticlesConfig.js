@@ -3,15 +3,25 @@ import Particles from 'react-particles-js'
 import "./ParticlesStyle.css"
 const ParticlesConfig = () => {
   const [size, setSize] = useState(window.innerWidth); 
+  
+  let timer
   function checkSize () {
-    setSize(window.innerWidth)
+    clearTimeout(timer);
+    timer = setTimeout(()=>{
+      setSize(window.innerWidth)
+      // document.querySelector(".tsparticles-canvas-el").width = "1"
+    }, 100);
   }
+  
   useEffect( () => {
     window.addEventListener("resize", checkSize)
-  },[] )    
+    return () =>{
+      window.removeEventListener("resize", checkSize)
+    }
+  },[size])
+  
   return (
         <Particles
-        
             params={{
               "particles": {
                 "number": {
@@ -22,7 +32,7 @@ const ParticlesConfig = () => {
                   }
                 },
                 "color": {
-                  "value": "#00aeff" //The color of the atom
+                  "value": "#fff" //The color of the atom
                 },
                 "shape": {
                   "type": "circle", //The shape of the atom "circle" ,"edge" ,"triangle" ,"polygon" ,"star" ,"image" ,["circle", "triangle", "image"]
@@ -82,11 +92,11 @@ const ParticlesConfig = () => {
                 }
               },
               "interactivity": {
-                "detect_on": "canvas", //Interaction detection between atoms "canvas", "window"
+                "detect_on": "window", //Interaction detection between atoms "canvas", "window"
                 "events": {
                   "onhover": {
                     "enable": true, //Hover
-                    "mode": "bubble" //Hover mode "grab" grabs nearby, "bubble" bubble ball effect, "repulse" knockback effect, ["grab", "bubble"]
+                    "mode": "grab" //Hover mode "grab" grabs nearby, "bubble" bubble ball effect, "repulse" knockback effect, ["grab", "bubble"]
                   },
                   "onresize": {
                   "enable": true,
@@ -101,9 +111,9 @@ const ParticlesConfig = () => {
                 },
                 "modes": {
                   "grab": {
-                    "distance": 100, //Atomic interaction grab distance
+                    "distance": 350, //Atomic interaction grab distance
                     "line_linked": { 
-                      "opacity": 0.1  //Atomic interactive capture distance connection opacity
+                      "opacity": 2  //Atomic interactive capture distance connection opacity
                     }
                   },
                   "bubble": {
@@ -114,7 +124,7 @@ const ParticlesConfig = () => {
                     "speed": 3 
                   },
                   "repulse": {
-                    "distance": 400, //Knockback effect distance
+                    "distance": 200, //Knockback effect distance
                     "duration": 0.4 //Knockback effect continuous event
                   },
                   "push": {
