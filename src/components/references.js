@@ -3,7 +3,7 @@ import "./References.css"
 import "./button.css"
 const references = () => {
     return (
-        <section className="references-container">
+        <section className="references-container" id="references">
             <div className="references-title">
                 <h1>Referencje</h1>
                 <div class='rect rect1'></div>

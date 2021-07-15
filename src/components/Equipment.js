@@ -2,7 +2,7 @@ import React from 'react'
 import "./equipment.css"
 const Equipment = () => {
     return (
-<section className="equipment-container">
+<section className="equipment-container" id="equipment">
             <div className="right">
                 <div className="equipment-title">
                 <h1>Sprzęt</h1>
