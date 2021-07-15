@@ -19,13 +19,13 @@
   background: rgb(255, 255, 255);
   transition: transform 0.1s ease-in;
   z-index: -1;
-  transform: scaleY(0);
-  transform-origin: top center;
+  transform: scaleX(0);
+  transform-origin: top right;
 }
 
 .link-btn:hover::after {
-  transform: scaleY(1);
-  transform-origin: bottom center;
+  transform: scaleX(1);
+  transform-origin: center left;
 }
 
 .link-btn:hover {

@@ -22,7 +22,7 @@ header {
   transition: 0.3s ease-in-out;
 }
 .header-container {
-  height: 125px;
+  height: 100px;
 }
 .header.active {
   background-color: #073a7d;
@@ -34,7 +34,7 @@ header {
   margin: 0rem 4rem 1rem 4rem;
 }
 .header-container .nav img {
-  max-width: 110px;
+  max-width: 90px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
