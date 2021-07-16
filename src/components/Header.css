@@ -19,7 +19,7 @@ header {
   transition: 0.3s ease-in-out;
 }
 .header-container {
-  height: 100px;
+  height: 90px;
 }
 .header.active {
   background-color: #073a7d;

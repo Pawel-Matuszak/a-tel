@@ -90,7 +90,7 @@ const ContactForm = () => {
       
       
       <span className="error-msg">{errorMsg}</span>
-      {loading && <span className="loading-screen">Loading</span>}
+      {loading && <span className="loading-screen"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></span>}
       {msgSend ? <span className="success-msg" style={{color: "#52CC2D"}}>Wiadomość wysłana</span> : <Button type="submit" content={"Wyślij"} link="#"/>}
       
 

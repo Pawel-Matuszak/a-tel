@@ -27,29 +27,44 @@
   background-color: #1f63bc;
 }
 .references-recs {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 70%;
 }
-.references-rec {
-  width: 450px;
-  height: 600px;
+
+.reference-img {
+  width: 100%;
   background-position: center;
   background-size: cover;
-  margin: 0.5rem 1rem !important;
+  user-select: none;
 }
-.references-rec-left {
-  background-image: url(../Atem_2008-1.png);
+
+.zoomed-image-container{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.5);
+  user-select: none;
 }
-.references-rec-center {
-  background-image: url(../Atem_2011-1.png);
+
+.reference-img:hover{
+  cursor: zoom-in;
 }
-.references-rec-right {
-  background-image: url(../Atem_2013-1.png);
+
+.zoomed-image-container:hover{
+  cursor: zoom-out;
 }
+
+.zoomed-image{
+  height: 100vh;
+  user-select: none;
+}
+
 .references-button {
   display: flex;
   align-items: center;
@@ -65,4 +80,5 @@
     width: 250px;
     height: 350px;
   }
+  
 }

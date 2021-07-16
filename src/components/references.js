@@ -1,5 +1,9 @@
 import React from 'react'
 import Button from "./Button"
+import Reference from './Reference'
+import img1 from '../ReferenceImgs/Atem_2008-1.png'
+import img2 from '../ReferenceImgs/Atem_2011-1.png'
+import img3 from '../ReferenceImgs/Atem_2013-1.png'
 
 import "./References.css"
 import "./button.css"
@@ -11,13 +15,13 @@ const References = () => {
                 <div class='rect rect1'></div>
                 <div class='rect rect2'></div>
             </div>
-            <div className="references-recs">
-                <div className="references-rec references-rec-left"></div>
-                <div className="references-rec references-rec-center"></div>
-                <div className="references-rec references-rec-right"></div>
-                </div>
+            <div className="gallery-content references-recs">
+                <Reference src={img1}/>
+                <Reference src={img2}/>
+                <Reference src={img3}/>
+            </div>
                 <div className="references-button">
-                    <Button type={"a"} content={"Zobacz więcej"}/>
+                    <Button type={"a"} content={"Zobacz więcej"} link={"/gallery"}/>
                 </div>
         </section>
     )
