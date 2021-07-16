@@ -26,7 +26,7 @@ header {
 }
 .header-container .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 0rem 4rem 1rem 4rem;
 }
@@ -58,6 +58,9 @@ header {
   display: none;
 }
 @media screen and (max-width: 1140px) {
+  .header-container .nav {
+    justify-content: space-between;
+  }
   .header-container .nav img {
     max-width: 75px;
   }
