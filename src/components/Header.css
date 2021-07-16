@@ -6,9 +6,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* html {
-  scroll-behavior: smooth;
-} */
+
 body {
   color: #eeee;
   font-family: "Montserrat", sans-serif;
@@ -22,7 +20,7 @@ header {
   transition: 0.3s ease-in-out;
 }
 .header-container {
-  height: 100px;
+  height: 90px;
 }
 .header.active {
   background-color: #073a7d;
@@ -62,6 +60,7 @@ header {
   font-size: 2.5rem;
   display: none;
 }
+
 @media screen and (max-width: 1136px) {
   .header-container .nav {
     justify-content: center;

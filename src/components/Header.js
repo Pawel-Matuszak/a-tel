@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import { NavHashLink } from 'react-router-hash-link';
 import "./Header.css";
 import logo from "../logo.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -28,12 +29,12 @@ function Header (){
                     <a href=""><img src={logo} alt=""/></a>
                     </div>
                     <ul className="nav-links">
-                        <li><a href="#">Strona główna</a></li>
-                        <li><a href="#">Nasze usługi</a></li>
-                        <li><a href="#about">O nas</a></li>
-                        <li><a href="#references">Referencje</a></li>
-                        <li><a href="#equipment">Nasz sprzęt</a></li>
-                        <li><a href="#contact">Kontakt</a></li>
+                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="#">Strona główna</NavHashLink></li>
+                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="#">Nasze usługi</NavHashLink></li>
+                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="#about">O nas</NavHashLink></li>
+                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="#references">Referencje</NavHashLink></li>
+                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="#equipment">Nasz sprzęt</NavHashLink></li>
+                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="#contact">Kontakt</NavHashLink></li>
                     </ul>
                     <li><a href="#" className="hamburger-menu"><FontAwesomeIcon icon={faBars} /></a></li>
                 </div>

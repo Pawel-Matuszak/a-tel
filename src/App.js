@@ -1,4 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import ScrollToTop from "./Components/ScrollToTop";
 import Footer from "./Components/Footer";
 import Contact from "./Components/Contact";
 import Map from "./Components/Map"
@@ -8,19 +14,32 @@ import Hero from "./Components/Hero";
 import About from "./Components/About"
 import References from "./Components/References";
 import Equipment from "./Components/Equipment";
+import Gallery from "./Components/Gallery";
 
 function App() {
+
   return (
-    <div className="App">
-      <Header/>
-      <Hero/>
-      <About/>
-      <References/>
-      <Equipment/>
-      <Contact/>
-      <Map/>
-      <Footer/>
-    </div>
+    <Router>
+        <ScrollToTop/>
+        <Header/>
+        <Switch>
+          <Route path="/gallery">
+            <Gallery/>
+          </Route>
+
+          <Route path="/">
+            <Hero/>
+            <About/>
+            <References/>
+            <Equipment/>
+            <Contact/>
+            <Map/>
+          </Route>
+
+        </Switch>
+        <Footer/>
+    </Router>
+    
   );
 }
 export default App;
