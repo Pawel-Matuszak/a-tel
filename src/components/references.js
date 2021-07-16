@@ -15,13 +15,10 @@ const References = () => {
                 <div class='rect rect1'></div>
                 <div class='rect rect2'></div>
             </div>
-            <div className="references-recs">
+            <div className="gallery-content references-recs">
                 <Reference src={img1}/>
                 <Reference src={img2}/>
                 <Reference src={img3}/>
-                {/* <div className="references-rec references-rec-left"></div>
-                <div className="references-rec references-rec-center"></div>
-                <div className="references-rec references-rec-right"></div> */}
             </div>
                 <div className="references-button">
                     <Button type={"a"} content={"Zobacz więcej"} link={"/gallery"}/>

@@ -5,11 +5,10 @@ const Reference = ({src}) => {
 
   return (
     <div 
-      className="reference-img" 
+      className="reference-img-container"
       onClick={()=>setZoom(!zoom)} 
-      style={
-        {backgroundImage: `url("${src}")`}
-      }>
+      >
+        <img src={src} alt="Referencja" className="reference-img"></img>
       {zoom && (
         <div className="zoomed-image-container">
           <img src={src} alt="Referencja" className="zoomed-image"></img>
