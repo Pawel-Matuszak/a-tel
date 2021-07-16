@@ -1,11 +1,13 @@
 import React from 'react'
+import Button from "./Button"
+
 import "./References.css"
 import "./button.css"
-const references = () => {
+const References = () => {
     return (
         <section className="references-container" id="references">
             <div className="references-title">
-                <h1>Referencje</h1>
+                <h2 className="section-title">Referencje</h2>
                 <div class='rect rect1'></div>
                 <div class='rect rect2'></div>
             </div>
@@ -15,10 +17,10 @@ const references = () => {
                 <div className="references-rec references-rec-right"></div>
                 </div>
                 <div className="references-button">
-                    <a href= "#" className="link-btn">Zobacz więcej</a>
+                    <Button type={"a"} content={"Zobacz więcej"}/>
                 </div>
         </section>
     )
 }
 
-export default references
+export default References

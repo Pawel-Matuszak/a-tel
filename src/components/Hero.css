@@ -12,7 +12,7 @@ body {
   background-color: #052957;
 }
 .textContainer {
-  height: 100vh;
+  height: calc(100vh - 100px);
   width: 100%;
 }
 .main-title {
@@ -26,10 +26,19 @@ body {
   text-align: center;
 }
 .textContainer h1 {
-  font-size: 4.5rem;
+  font-size: 4rem;
 }
 .textContainer h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+@media screen and (max-width:500px){
+  .textContainer h1 {
+    font-size: 2.5rem;
+  }
+  .textContainer h2 {
+    font-size: 1.5rem;
+  }
 }

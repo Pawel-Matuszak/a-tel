@@ -1,12 +1,12 @@
 .link-btn {
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(0, 0);
   padding: 1rem 2rem;
   border: 1px solid white;
   font-weight: 300;
   letter-spacing: 1px;
+  font-size: 1rem;
+  background: transparent;
 }
 
 .link-btn::after {
@@ -29,5 +29,6 @@
 }
 
 .link-btn:hover {
+  cursor: pointer;
   color: #073a7d;
 }

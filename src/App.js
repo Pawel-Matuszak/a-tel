@@ -1,13 +1,14 @@
 import React from "react";
 import Footer from "./Components/Footer";
 import Contact from "./Components/Contact";
-import Map from "./Components/Map";
-import Button from "./Components/Button";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About"
-import References from "./components/References";
-import Equipment from "./components/Equipment";
+import Map from "./Components/Map"
+import Button from "./Components/Button"
+import Header from "./Components/Header";
+import Hero from "./Components/Hero";
+import About from "./Components/About"
+import References from "./Components/References";
+import Equipment from "./Components/Equipment";
+
 function App() {
   return (
     <div className="App">

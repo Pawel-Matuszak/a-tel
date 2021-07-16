@@ -54,6 +54,10 @@ input:focus, textarea:focus{
   outline: none;
 }
 
+button[type="submit"]{
+  margin: .8rem 0;
+}
+
 .textArea{
   display: flex;
   justify-content: center;
