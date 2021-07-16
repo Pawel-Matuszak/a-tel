@@ -4,7 +4,7 @@
   flex-direction: column;
   min-height: calc(100vh - 100px);
   padding: 5rem 0;
-  background: #073A7D;
+  background: #073a7d;
 }
 .references-title {
   display: flex;
@@ -16,14 +16,14 @@
   width: 100%;
 }
 .references-title .rect {
-  background-color: #073a7d;
-  width: 200px;
+  background-color: #03306b;
+  width: 225px;
   height: 15px;
   position: relative;
   bottom: 2rem;
 }
 .references-title .rect2 {
-  margin-left: 1rem;
+  margin-left: 2rem;
   background-color: #1f63bc;
 }
 .references-recs {
@@ -60,8 +60,8 @@
   text-decoration: none;
 }
 
-@media screen and (max-width:970px){
-  .references-rec{
+@media screen and (max-width: 970px) {
+  .references-rec {
     width: 250px;
     height: 350px;
   }
