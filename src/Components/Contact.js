@@ -12,11 +12,11 @@ const Contact = () => {
         <div className="contact-info">
           <h2 className="section-title">Kontakt</h2>
           <ul className="contact-info-list">
-            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faPhoneAlt}/><span><p>Właściciel firmy:</p> +48 790 221 144</span></li>
-            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faPhoneAlt}/><span><p>Asystentka:</p> +48 531 998 371</span></li>
-            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faEnvelope}/><span><p>Właściciel firmy:</p> andrzej.borzek@a-tel.com.pl</span></li>
-            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faEnvelope}/><span><p>Asystentka:</p> agnieszka.pierzga@a-tel.com.pl</span></li>
-            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faEnvelope}/><span><p>Biuro:</p> biuro@a-tel.com.pl</span></li>
+            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faPhoneAlt}/><span><p>Właściciel firmy:</p> <a href="tel:790 221 144">+48 790 221 144</a></span></li>
+            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faPhoneAlt}/><span><p>Asystentka:</p> <a href="tel:531 998 371">+48 531 998 371</a></span></li>
+            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faEnvelope}/><span><p>Właściciel firmy:</p> <a href="mailto:andrzej.borzek@a-tel.com.pl">andrzej.borzek@a-tel.com.pl</a></span></li>
+            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faEnvelope}/><span><p>Asystentka:</p> <a href="mailto:agnieszka.pierzga@a-tel.com.pl">agnieszka.pierzga@a-tel.com.pl</a></span></li>
+            <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faEnvelope}/><span><p>Biuro:</p> <a href="mailto:biuro@a-tel.com.pl">biuro@a-tel.com.pl</a></span></li>
             <li><FontAwesomeIcon className="fontAwesomeIcon" icon={faHome}/><span>Wolności 99, 45-920 Opole</span></li>
           </ul>
         </div>

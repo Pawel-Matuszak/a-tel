@@ -29,12 +29,12 @@ function Header (){
                         <a href=""><img src={logo} alt=""/></a>
                     </div>
                     <ul className={click ? "nav-links" : "nav-links active"}>
-                        <li onClick={handleClick}><NavHashLink activeClassName="nav-link-selected" smooth to="/#">Strona główna</NavHashLink></li>
-                        <li onClick={handleClick}><NavHashLink activeClassName="nav-link-selected" smooth to="/#">Nasze usługi</NavHashLink></li>
-                        <li onClick={handleClick}><NavHashLink activeClassName="nav-link-selected" smooth to="/#about">O nas</NavHashLink></li>
-                        <li onClick={handleClick}><NavHashLink activeClassName="nav-link-selected" smooth to="/#references">Referencje</NavHashLink></li>
-                        <li onClick={handleClick}><NavHashLink activeClassName="nav-link-selected" smooth to="/#equipment">Nasz sprzęt</NavHashLink></li>
-                        <li onClick={handleClick}><NavHashLink activeClassName="nav-link-selected" smooth to="/#contact">Kontakt</NavHashLink></li>
+                        <li onClick={handleClick}><NavHashLink smooth to="/#">Strona główna</NavHashLink></li>
+                        <li onClick={handleClick}><NavHashLink smooth to="/#">Nasze usługi</NavHashLink></li>
+                        <li onClick={handleClick}><NavHashLink smooth to="/#about">O nas</NavHashLink></li>
+                        <li onClick={handleClick}><NavHashLink smooth to="/#references">Referencje</NavHashLink></li>
+                        <li onClick={handleClick}><NavHashLink smooth to="/#equipment">Nasz sprzęt</NavHashLink></li>
+                        <li onClick={handleClick}><NavHashLink smooth to="/#contact">Kontakt</NavHashLink></li>
                     </ul>
                     <div onClick={handleClick} className="hamburger-menu"><FontAwesomeIcon className="fontAwesomeIcon hamburger-menu" icon={click ? faBars : faTimes}/></div>
                 </div>

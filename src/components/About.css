@@ -1,5 +1,5 @@
 .about-container {
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 90px);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
   grid-template-rows: 1fr;

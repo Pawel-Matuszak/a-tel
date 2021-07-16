@@ -14,7 +14,7 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 9999;
   background-color: transparent;
   transition: 0.3s ease-in-out;
 }
@@ -31,7 +31,7 @@ header {
   margin: 0rem 4rem 1rem 4rem;
 }
 .header-container .nav img {
-  max-width: 90px;
+  max-width: 80px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
@@ -77,6 +77,7 @@ header {
     align-items: center;
     justify-content: center;
     transition: 0.5s ease-out;
+    z-index: 9999;
   }
   .header-container li a {
     margin-top: 0.5rem;
