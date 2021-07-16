@@ -26,15 +26,15 @@ function Header (){
             <div className="header-container">
                 <div className="nav">
                     <div className="logo">
-                    <a href=""><img src={logo} alt=""/></a>
+                        <a href=""><img src={logo} alt=""/></a>
                     </div>
                     <ul className="nav-links">
-                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="#">Strona główna</NavHashLink></li>
-                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="#">Nasze usługi</NavHashLink></li>
-                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="#about">O nas</NavHashLink></li>
-                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="#references">Referencje</NavHashLink></li>
-                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="#equipment">Nasz sprzęt</NavHashLink></li>
-                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="#contact">Kontakt</NavHashLink></li>
+                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="/#">Strona główna</NavHashLink></li>
+                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="/#">Nasze usługi</NavHashLink></li>
+                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="/#about">O nas</NavHashLink></li>
+                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="/#references">Referencje</NavHashLink></li>
+                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="/#equipment">Nasz sprzęt</NavHashLink></li>
+                        <li><NavHashLink activeClassName="nav-link-selected" smooth to="/#contact">Kontakt</NavHashLink></li>
                     </ul>
                     <li><a href="#" className="hamburger-menu"><FontAwesomeIcon icon={faBars} /></a></li>
                 </div>
