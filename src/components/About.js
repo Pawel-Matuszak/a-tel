@@ -1,8 +1,8 @@
 import React from 'react'
 import "./About.css"
-const About = () => {
+const About = ({passRef}) => {
     return (
-        <section className="about-container" id="about">
+        <section className="about-container" id="about" ref={passRef}>
             <div className="left">
             </div>
             <div className="right">

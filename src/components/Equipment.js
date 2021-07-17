@@ -1,9 +1,9 @@
 import React from 'react'
 import "./equipment.css"
 
-const Equipment = () => {
+const Equipment = ({passRef}) => {
     return (
-        <section className="equipment-container" id="equipment">
+        <section className="equipment-container" id="equipment" ref={passRef}>
             <div className="right">
                 <div className="equipment-title">
                     <h2 className="section-title">Sprzęt</h2>

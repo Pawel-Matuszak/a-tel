@@ -5,9 +5,9 @@ import ContactForm from './ContactForm'
 import './contact.css'
 
 
-const Contact = () => {
+const Contact = ({passRef}) => {
   return (
-    <section id="contact">
+    <section id="contact" ref={passRef}>
       <div className="contact-container">
         <div className="contact-info">
           <h2 className="section-title">Kontakt</h2>

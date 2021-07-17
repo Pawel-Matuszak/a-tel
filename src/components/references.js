@@ -7,9 +7,9 @@ import img3 from '../ReferenceImgs/Atem_2013-1.png'
 
 import "./References.css"
 import "./button.css"
-const References = () => {
+const References = ({passRef}) => {
     return (
-        <section className="references-container" id="references">
+        <section className="references-container" id="references" ref={passRef}>
             <div className="references-title">
                 <h2 className="section-title">Referencje</h2>
                 <div class='rect rect1'></div>
