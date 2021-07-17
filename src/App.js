@@ -15,6 +15,7 @@ import About from "./Components/About"
 import References from "./Components/References";
 import Equipment from "./Components/Equipment";
 import Gallery from "./Components/Gallery";
+import Offer from "./Components/Offer";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
 
           <Route path="/">
             <Hero/>
+            <Offer/>
             <About/>
             <References/>
             <Equipment/>
