@@ -5,7 +5,7 @@ import logo from "../logo.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faBars, faTimes} from "@fortawesome/free-solid-svg-icons"
 function Header (){
-    const [click, setClick] = useState(false);
+    const [click, setClick] = useState(true);
     const handleClick = () => setClick(!click);
     const [header, setHeader] = useState(false);
     const changebackground = () => {

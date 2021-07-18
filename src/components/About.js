@@ -1,8 +1,22 @@
-import React from 'react'
+import React, {useRef} from 'react'
+import { useIntersection } from "react-use"
+
 import "./About.css"
-const About = ({passRef}) => {
+const About = ({bgNotActive, bgActive}) => {
+    const about = useRef(null)
+
+    const aboutIntersection = useIntersection(about, {
+        root: null,
+        rootMargin: "50%",
+        threshold: 1,
+    })
+
+    aboutIntersection && aboutIntersection.intersectionRatio < 1 
+        ? bgNotActive(about.current)
+        : bgActive(about.current)
+
     return (
-        <section className="about-container" id="about" ref={passRef}>
+        <section className="about-container" id="about" ref={about}>
             <div className="left">
             </div>
             <div className="right">
