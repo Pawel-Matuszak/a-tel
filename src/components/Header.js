@@ -5,7 +5,7 @@ import logo from "../logo.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faBars, faTimes} from "@fortawesome/free-solid-svg-icons"
 function Header (){
-    const [click, setClick] = useState(false);
+    const [click, setClick] = useState(true);
     const handleClick = () => setClick(!click);
     const [header, setHeader] = useState(false);
     const changebackground = () => {
@@ -30,7 +30,7 @@ function Header (){
                     </div>
                     <ul className={click ? "nav-links" : "nav-links active"}>
                         <li onClick={handleClick}><NavHashLink smooth to="/#">Strona główna</NavHashLink></li>
-                        <li onClick={handleClick}><NavHashLink smooth to="/#">Nasze usługi</NavHashLink></li>
+                        <li onClick={handleClick}><NavHashLink smooth to="/#services">Nasze usługi</NavHashLink></li>
                         <li onClick={handleClick}><NavHashLink smooth to="/#about">O nas</NavHashLink></li>
                         <li onClick={handleClick}><NavHashLink smooth to="/#references">Referencje</NavHashLink></li>
                         <li onClick={handleClick}><NavHashLink smooth to="/#equipment">Nasz sprzęt</NavHashLink></li>

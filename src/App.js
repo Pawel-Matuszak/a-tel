@@ -15,7 +15,7 @@ import About from "./Components/About"
 import References from "./Components/References";
 import Equipment from "./Components/Equipment";
 import Gallery from "./Components/Gallery";
-import Offer from "./Components/Offer";
+import Services from "./Components/Services";
 
 function App() {
 
@@ -27,10 +27,9 @@ function App() {
           <Route path="/gallery">
             <Gallery/>
           </Route>
-
           <Route path="/">
             <Hero/>
-            <Offer/>
+            <Services/>
             <About/>
             <References/>
             <Equipment/>

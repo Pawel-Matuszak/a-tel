@@ -12,7 +12,7 @@ body {
   background-color: #052957;
 }
 .textContainer {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 90px);
   width: 100%;
 }
 .main-title {
@@ -34,7 +34,7 @@ body {
   font-weight: 500;
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width: 500px) {
   .textContainer h1 {
     font-size: 2.5rem;
   }

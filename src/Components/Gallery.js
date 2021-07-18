@@ -15,7 +15,11 @@ const Gallery = () => {
 
   return (
     <div className="gallery-container">
-      <h2 className="gallery-title">Nasze referencje</h2>
+        <div className="references-title">
+           <h2 className="section-title">Referencje</h2>
+            <div class='rect rect1'></div>
+            <div class='rect rect2'></div>
+        </div>
       <div className="gallery-content">
         {images.map((image, id) => (
           <Reference src={image.default} key={id}/>

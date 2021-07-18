@@ -12,7 +12,7 @@
 }
 .offer-title .rect {
   background-color: #03306b;
-  width: 150px;
+  width: 275px;
   height: 15px;
   position: relative;
   bottom: 2rem;
@@ -40,21 +40,18 @@
 .icon-circle {
   width: 100px;
   height: 100px;
-  background-color: rgba(254, 254, 255, 0.75);
-  box-shadow: 0px 0px 25px -5px #7c8ebb;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 0px 25px -5px rgba(254, 254, 255, 0.5);
   border-radius: 100%;
   margin: 2rem 0rem 1rem 0rem;
 }
 .icon-text {
-  width: 250px;
+  width: 350px;
   text-align: center;
 }
 .icon-text h2 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-}
-.icon-text p {
-  font-size: 1rem;
 }
 .icon {
   position: relative;
@@ -62,12 +59,18 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
-@media screen and (max-width: 1140px) {
+.bigger-icon {
+  width: 45px;
+}
+.smaller-icon {
+  width: 50px;
+}
+@media screen and (max-width: 1400px) {
   .icons-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 850px) {
   .icons-container {
     grid-template-columns: repeat(1, 1fr);
   }
