@@ -28,13 +28,13 @@ function App() {
 
   const bgNotActive = element =>{
     gsap.fromTo(element, {}, {
-      backgroundColor: "#073A7D"
+      background: "#052957"
     })
   }
 
   const bgActive = element => {
     gsap.fromTo(element, {}, {
-      backgroundColor: "#062E63"
+      background: "#07336E"
     })
   }
 
@@ -99,7 +99,7 @@ function App() {
           </Route>
 
           <Route path="/">
-            <Hero passRef={hero}/>
+            <Hero/>
             <About passRef={about}/>
             <References passRef={references}/>
             <Equipment passRef={equipment}/>

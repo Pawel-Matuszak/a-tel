@@ -22,7 +22,7 @@ header {
   height: 90px;
 }
 .header.active {
-  background-color: #073a7d;
+  background-color: rgb(9, 52, 109);
 }
 .header-container .nav {
   display: flex;
