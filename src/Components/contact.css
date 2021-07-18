@@ -1,34 +1,38 @@
 /* Contact */
 
-.contact-container{
+.contact-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: top;
-  background: #073A7D;
+  background: #073a7d;
   font-size: 1.05rem;
   min-height: 70vh;
   font-weight: 600;
 }
 
-.contact-info{
+.contact-info {
   padding: 6rem 2rem;
 }
 
-.contact-info-list li .fontAwesomeIcon{
+.contact-info-list li .fontAwesomeIcon {
   font-size: 2.3rem;
 }
 
-.contact-info-list li{
+.contact-info-list li {
   margin: 1rem 0;
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
-.contact-info-list li span p{
+.contact-info-list li span p {
   font-weight: 400;
 }
 
-form{
+.contact-info-list li a:hover {
+  color: #d4d3d3;
+}
+
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,10 +41,11 @@ form{
   position: relative;
 }
 
-input, textarea{
+input,
+textarea {
   width: 80%;
-  padding: .6rem .6rem;
-  margin: .6rem .5rem;
+  padding: 0.6rem 0.6rem;
+  margin: 0.6rem 0.5rem;
   font-size: 1rem;
   color: #707070;
   border: none;
@@ -49,49 +54,50 @@ input, textarea{
   resize: none;
 }
 
-input:focus, textarea:focus{
+input:focus,
+textarea:focus {
   border: none;
   outline: none;
 }
 
-button[type="submit"]{
-  margin: .8rem 0;
+button[type="submit"] {
+  margin: 0.8rem 0;
 }
 
-.textArea{
+.textArea {
   display: flex;
   justify-content: center;
   position: relative;
 }
 
-.charCount{
+.charCount {
   position: absolute;
-  top:80%;
-  right:13%;
+  top: 80%;
+  right: 13%;
   z-index: 99;
   color: #707070;
 }
 
-.error-msg{
-  color: #CC8719;
+.error-msg {
+  color: #cc8719;
   font-size: 1rem;
   font-weight: 600;
 }
 
-.success-msg{
-  color: #52CC2D;
+.success-msg {
+  color: #52cc2d;
   font-size: 1rem;
   font-weight: 600;
   margin: 1rem;
 }
 
-.loading-screen{
+.loading-screen {
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.3);
@@ -136,13 +142,12 @@ button[type="submit"]{
   }
 }
 
-
 @media screen and (max-width: 904px) {
-  .contact-info{
+  .contact-info {
     padding: 2rem 2rem;
   }
 
-  form{
+  form {
     padding: 2rem 0;
   }
 }
