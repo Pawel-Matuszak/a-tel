@@ -7,7 +7,6 @@
   box-sizing: border-box;
 }
 body {
-  color: #eeee;
   font-family: "Montserrat", sans-serif;
 }
 header {
@@ -47,12 +46,8 @@ header {
 }
 .header-container a {
   font-size: 1.2rem;
-  opacity: 0.85;
   transition: opacity 0.3s ease-in-out;
   text-decoration: none;
-}
-.header-container a:hover {
-  opacity: 1;
 }
 .hamburger-menu {
   display: none;
