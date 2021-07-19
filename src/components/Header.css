@@ -41,6 +41,7 @@ header {
   list-style: none;
 }
 .header-container li {
+  margin-left: 2.5rem;
   list-style: none;
 }
 .header-container a {
@@ -51,6 +52,7 @@ header {
 .hamburger-menu {
   display: none;
 }
+
 @media screen and (max-width: 1140px) {
   .header-container .nav {
     justify-content: space-between;
@@ -72,6 +74,9 @@ header {
     justify-content: center;
     transition: 0.5s ease-out;
     z-index: 9999;
+  }
+  .header-container li {
+    margin-left: 0rem;
   }
   .header-container li a {
     margin-top: 0.5rem;
