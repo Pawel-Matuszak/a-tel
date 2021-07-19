@@ -11,7 +11,7 @@ const Contact = ({bgNotActive, bgActive}) => {
 
   const contactIntersection = useIntersection(contact, {
     root: null,
-    rootMargin: "50%",
+    rootMargin: "20%",
     threshold: 1,
   })
 

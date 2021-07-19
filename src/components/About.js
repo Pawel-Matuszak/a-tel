@@ -7,7 +7,7 @@ const About = ({bgNotActive, bgActive}) => {
 
     const aboutIntersection = useIntersection(about, {
         root: null,
-        rootMargin: "50%",
+        rootMargin: "40%",
         threshold: 1,
     })
 

@@ -7,7 +7,7 @@ const Equipment = ({bgNotActive, bgActive}) => {
 
     const equipmentIntersection = useIntersection(equipment, {
         root: null,
-        rootMargin: "50%",
+        rootMargin: "40%",
         threshold: 1,
     })
 

@@ -13,7 +13,7 @@ const References = ({bgNotActive, bgActive}) => {
 
     const referencesIntersection = useIntersection(references, {
         root: null,
-        rootMargin: "50%",
+        rootMargin: "40%",
         threshold: 1,
     })
 

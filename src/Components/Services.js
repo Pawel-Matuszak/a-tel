@@ -16,7 +16,7 @@ const Services = ({bgNotActive, bgActive}) => {
 
     const servicesIntersection = useIntersection(services, {
       root: null,
-      rootMargin: "50%",
+      rootMargin: "40%",
       threshold: 1,
     })
   
