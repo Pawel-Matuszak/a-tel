@@ -22,7 +22,7 @@ const References = ({bgNotActive, bgActive}) => {
         : bgActive(references.current)
 
     return (
-        <section className="references-container" id="references" ref={references}>
+        <section className="references-container" id="referencje" ref={references}>
             <div className="references-title">
                 <h2 className="section-title">Referencje</h2>
                 <div class='rect rect1'></div>

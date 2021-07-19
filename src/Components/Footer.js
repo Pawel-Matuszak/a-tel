@@ -13,11 +13,11 @@ const Footer = () => {
           <h2>Przydatne linki</h2>
           <ul className="nav-links">
             <li><NavHashLink smooth to="/#">Strona główna</NavHashLink></li>
-            <li><NavHashLink smooth to="/#">Nasze usługi</NavHashLink></li>
-            <li><NavHashLink smooth to="/#about">O nas</NavHashLink></li>
-            <li><NavHashLink smooth to="/#references">Referencje</NavHashLink></li>
-            <li><NavHashLink smooth to="/#equipment">Nasz sprzęt</NavHashLink></li>
-            <li><NavHashLink smooth to="/#contact">Kontakt</NavHashLink></li>
+            <li><NavHashLink smooth to="/#nasze-uslugi">Nasze usługi</NavHashLink></li>
+            <li><NavHashLink smooth to="/#o-nas">O nas</NavHashLink></li>
+            <li><NavHashLink smooth to="/#referencje">Referencje</NavHashLink></li>
+            <li><NavHashLink smooth to="/#nasz-sprzet">Nasz sprzęt</NavHashLink></li>
+            <li><NavHashLink smooth to="/#kontakt">Kontakt</NavHashLink></li>
           </ul>
         </div>
         <div className="contact">

@@ -36,7 +36,7 @@ function App() {
         <ScrollToTop/>
         <Header/>
         <Switch>
-          <Route path="/gallery">
+          <Route path="/galeria">
             <Gallery/>
           </Route>
           <Route path="/">

@@ -20,7 +20,7 @@ const Contact = ({bgNotActive, bgActive}) => {
       : bgActive(contact.current)
 
   return (
-    <section id="contact" ref={contact}>
+    <section id="kontakt" ref={contact}>
       <div className="contact-container">
         <div className="contact-info">
           <h2 className="section-title">Kontakt</h2>

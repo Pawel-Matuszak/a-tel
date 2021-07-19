@@ -49,4 +49,7 @@
   .equipment-container .right {
     grid-row-start: 2;
   }
+  .equipment-container .left {
+    background-position: bottom center;
+  }
 }

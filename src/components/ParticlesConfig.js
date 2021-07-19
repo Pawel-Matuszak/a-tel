@@ -3,18 +3,23 @@ import Particles from 'react-particles-js'
 import "./ParticlesStyle.css"
 const ParticlesConfig = () => {
   const [size, setSize] = useState(window.innerWidth); 
+  const [enableHover, setEnableHover] = useState(true); 
   
   let timer
   function checkSize () {
     clearTimeout(timer);
     timer = setTimeout(()=>{
       setSize(window.innerWidth)
-      // document.querySelector(".tsparticles-canvas-el").width = "1"
     }, 100);
   }
   
   useEffect( () => {
     window.addEventListener("resize", checkSize)
+    if(size<640){
+      setEnableHover(false)
+    }else{
+      setEnableHover(true)
+    }
     return () =>{
       window.removeEventListener("resize", checkSize)
     }
@@ -95,7 +100,7 @@ const ParticlesConfig = () => {
                 "detect_on": "window", //Interaction detection between atoms "canvas", "window"
                 "events": {
                   "onhover": {
-                    "enable": true, //Hover
+                    "enable": enableHover, //Hover
                     "mode": "grab" //Hover mode "grab" grabs nearby, "bubble" bubble ball effect, "repulse" knockback effect, ["grab", "bubble"]
                   },
                   "onresize": {

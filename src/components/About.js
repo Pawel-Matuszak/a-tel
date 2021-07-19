@@ -16,7 +16,7 @@ const About = ({bgNotActive, bgActive}) => {
         : bgActive(about.current)
 
     return (
-        <section className="about-container" id="about" ref={about}>
+        <section className="about-container" id="o-nas" ref={about}>
             <div className="left">
             </div>
             <div className="right">

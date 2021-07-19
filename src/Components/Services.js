@@ -25,7 +25,7 @@ const Services = ({bgNotActive, bgActive}) => {
         : bgActive(services.current)
 
     return (
-        <section className="offer-container" id="services" ref={services}>
+        <section className="offer-container" id="nasze-uslugi" ref={services}>
             <div className="offer-title">
                 <h2 className="section-title">Nasze usługi</h2>
                 <div class='rect rect1'></div>
