@@ -28,7 +28,8 @@
 }
 .references-recs {
   margin: 0 auto;
-  width: 70%;
+  width: 80%;
+  max-width: 1200px;
 }
 
 .reference-img {

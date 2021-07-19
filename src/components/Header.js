@@ -26,7 +26,7 @@ function Header (){
             <div className="header-container">
                 <div className="nav">
                     <div className="logo">
-                        <a href=""><img src={logo} alt=""/></a>
+                        <img src={logo} alt=""/>
                     </div>
                     <ul className={click ? "nav-links" : "nav-links active"}>
                         <li onClick={handleClick}><NavHashLink smooth to="/#">Strona główna</NavHashLink></li>
