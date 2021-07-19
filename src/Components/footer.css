@@ -1,7 +1,7 @@
 /* Footer */
 
 .footer-conatiner {
-  background: #073a7d;
+  background: #052957;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -37,7 +37,7 @@
 
 .copyright {
   color: #eeeeee;
-  background: #073470;
+  background: #07336e;
   padding: 1.5rem 0;
   text-align: center;
   font-size: 1.1rem;

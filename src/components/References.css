@@ -61,7 +61,7 @@
 }
 
 .zoomed-image {
-  height: 100vh;
+  display: block;
   user-select: none;
 }
 

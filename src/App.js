@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useRef } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,8 +16,20 @@ import References from "./Components/References";
 import Equipment from "./Components/Equipment";
 import Gallery from "./Components/Gallery";
 import Services from "./Components/Services";
+import gsap from "gsap"
 
 function App() {
+  const bgNotActive = element =>{
+    gsap.fromTo(element, {}, {
+      background: "#052957"
+    })
+  }
+
+  const bgActive = element => {
+    gsap.fromTo(element, {}, {
+      background: "#07336E"
+    })
+  }
 
   return (
     <Router>
@@ -29,11 +41,11 @@ function App() {
           </Route>
           <Route path="/">
             <Hero/>
-            <Services/>
-            <About/>
-            <References/>
-            <Equipment/>
-            <Contact/>
+            <Services bgNotActive={bgNotActive} bgActive={bgActive}/>
+            <About bgNotActive={bgNotActive} bgActive={bgActive}/>
+            <References bgNotActive={bgNotActive} bgActive={bgActive}/>
+            <Equipment bgNotActive={bgNotActive} bgActive={bgActive}/>
+            <Contact bgNotActive={bgNotActive} bgActive={bgActive}/>
             <Map/>
           </Route>
 

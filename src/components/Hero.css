@@ -9,7 +9,7 @@
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background-color: #052957;
+  background: radial-gradient(circle, rgb(11, 57, 109) 0%, rgba(5,41,87,1) 100%);
 }
 .textContainer {
   height: calc(100vh - 90px);
