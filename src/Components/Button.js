@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import "./button.css"
 
 const Button = ({type, content, link}) => {
   if(type==="a"){

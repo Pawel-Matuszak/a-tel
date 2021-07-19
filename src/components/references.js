@@ -2,9 +2,9 @@ import React, {useRef} from 'react'
 import { useIntersection } from "react-use"
 import Button from "./Button"
 import Reference from './Reference'
-import img1 from '../ReferenceImgs/Atem_2008-1.png'
-import img2 from '../ReferenceImgs/Atem_2011-1.png'
-import img3 from '../ReferenceImgs/Atem_2013-1.png'
+import img1 from '../ReferenceImgs/11Skanska_2018-1.png'
+import img2 from '../ReferenceImgs/12Atem_2011-1.png'
+import img3 from '../ReferenceImgs/15ASkanska_2014-1.png'
 
 import "./References.css"
 import "./button.css"
