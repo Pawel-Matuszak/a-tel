@@ -1,9 +1,9 @@
 import React from "react";
 import "./Hero.css"
 import ParticlesConfig from "./ParticlesConfig";
-const Hero = ({passRef}) => {
+const Hero = () => {
     return (
-        <section className = "textContainer" ref={passRef}>
+        <section className = "textContainer">
             <ParticlesConfig/>
             <div className="main-title">
                 <h1>A-TEL Andrzej Borzek</h1>

@@ -34,7 +34,7 @@ const References = ({bgNotActive, bgActive}) => {
                 <Reference src={img3}/>
             </div>
                 <div className="references-button">
-                    <Button type={"a"} content={"Zobacz więcej"} link={"/gallery"}/>
+                    <Button type={"a"} content={"Zobacz więcej"} link={"/galeria"}/>
                 </div>
         </section>
     )

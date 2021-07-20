@@ -1,4 +1,4 @@
-import React, {useRef } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,7 +8,6 @@ import ScrollToTop from "./Components/ScrollToTop";
 import Footer from "./Components/Footer";
 import Contact from "./Components/Contact";
 import Map from "./Components/Map"
-import Button from "./Components/Button"
 import Header from "./Components/Header";
 import Hero from "./Components/Hero";
 import About from "./Components/About"

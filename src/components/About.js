@@ -25,7 +25,10 @@ const About = ({bgNotActive, bgActive}) => {
                 <div class='rect rect1'></div>
                 <div class='rect rect2'></div>
                 </div>
-                <p className="section-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat repellendus assumenda corporis illo! Repellat accusamus perspiciatis inventore dolores, eligendi asperiores. Labore autem ut, recusandae architecto iure nihil maxime fugiat id necessitatibus temporibus, ratione at nulla, earum natus perferendis. Dolore voluptatibus quibusdam aspernatur nemo quidem aperiam placeat labore quam? Tempore, doloribus!</p>
+                <p className="section-content">Działalność firmy rozpoczęła się w 2008 roku. Zostaliśmy wpisani do ewidencji gospodarczej w Gminie Bytom w zakresie projektowania i budowy sieci telekomunikacyjnej. 
+Głównym przedmiotem działalności firmy jest budowa linii światłowodowych. Firma swoją pracę opiera na doświadczonej kadrze pracowników oraz nowoczesnej technologii i sprzęcie. Staż kadry kierowniczej oscyluje w 15 letnie doświadczenie w dziedzinie telekomunikacji. Każdy z pracowników posiada niezbędne umiejętności do realizacji inwestycji w branży światłowodowej.   
+Swoją ofertę kierujemy zarówno do Klientów indywidualnych, firm oraz przedsiębiorstw. 
+</p>
             </div>
         </section>
     )

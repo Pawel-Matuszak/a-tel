@@ -31,7 +31,9 @@ const Footer = () => {
         </div>
         <div className="about-us">
           <h2>O nas</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente tenetur recusandae repellendus dolores, similique quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, voluptas et dignissimos nihil labore necessitatibus?</p>
+          <p>Głównym przedmiotem działalności firmy jest budowa linii światłowodowych. Firma swoją pracę opiera na doświadczonej kadrze pracowników oraz nowoczesnej technologii i sprzęcie. Staż kadry kierowniczej oscyluje w 15 letnie doświadczenie w dziedzinie telekomunikacji.    
+
+          </p>
         </div>
       </div>
 
