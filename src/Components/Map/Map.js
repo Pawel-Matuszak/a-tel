@@ -1,7 +1,7 @@
 import React from "react";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Tooltip } from "react-leaflet";
-import icon from "../Imgs/icon.png";
+import icon from "../../Imgs/icon.png";
 import "./map.css";
 
 //Create icon

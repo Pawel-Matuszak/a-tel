@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Reference from './Reference'
-import './Gallery.css'
+import Reference from '../References/Reference'
+import './gallery.css'
 
 const Gallery = () => {
   const [images, setImages] = useState([])
@@ -10,7 +10,7 @@ const Gallery = () => {
   }
 
   useEffect(() => {
-    setImages(importAll(require.context('../ReferenceImgs/', false, /\.(png|jpe?g|svg)$/))) 
+    setImages(importAll(require.context('../../ReferenceImgs/', false, /\.(png|jpe?g|svg)$/))) 
   }, [])
 
   return (

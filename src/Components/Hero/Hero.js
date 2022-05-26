@@ -1,6 +1,7 @@
 import React from "react";
-import "./Hero.css";
-import ParticlesConfig from "./ParticlesConfig";
+import "./hero.css";
+import ParticlesConfig from "../Particles/ParticlesConfig";
+
 const Hero = () => {
   return (
     <section className="textContainer">

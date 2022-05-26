@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
 import { useIntersection } from "react-use";
-import Button from "./Button";
+import Button from "../Button/Button";
 import Reference from "./Reference";
-import img1 from "../ReferenceImgs/11Skanska_2018-1-min.png";
-import img2 from "../ReferenceImgs/12Atem_2011-1-min.png";
-import img3 from "../ReferenceImgs/15ASkanska_2014-1-min.png";
+import img1 from "../../ReferenceImgs/11Skanska_2018-1-min.png";
+import img2 from "../../ReferenceImgs/12Atem_2011-1-min.png";
+import img3 from "../../ReferenceImgs/15ASkanska_2014-1-min.png";
 
 import "./references.css";
-import "./button.css";
+import "../Button/button.css";
 const References = ({ bgNotActive, bgActive }) => {
   const references = useRef(null);
 

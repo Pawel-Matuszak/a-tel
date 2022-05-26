@@ -1,14 +1,14 @@
 import React, { useRef } from "react";
 import "./services.css";
-import img1 from "../ServicesIcons/kabel_sieci_telekomunikacyjnej.png";
-import img2 from "../ServicesIcons/kabel_optotelekominikacyjny.png";
-import img3 from "../ServicesIcons/urzadzenie_transmicji_cyfrowej.png";
-import img4 from "../ServicesIcons/kanalizacja_wtórna.png";
-import img5 from "../ServicesIcons/rurociagi_kablowe.png";
-import img6 from "../ServicesIcons/kanalizacja_pierwotna.png";
-import img7 from "../ServicesIcons/doradztwo_techniczne.png";
-import img8 from "../ServicesIcons/inwestycja.png";
-import img9 from "../ServicesIcons/portfolio.png";
+import img1 from "../../ServicesIcons/kabel_sieci_telekomunikacyjnej.png";
+import img2 from "../../ServicesIcons/kabel_optotelekominikacyjny.png";
+import img3 from "../../ServicesIcons/urzadzenie_transmicji_cyfrowej.png";
+import img4 from "../../ServicesIcons/kanalizacja_wtórna.png";
+import img5 from "../../ServicesIcons/rurociagi_kablowe.png";
+import img6 from "../../ServicesIcons/kanalizacja_pierwotna.png";
+import img7 from "../../ServicesIcons/doradztwo_techniczne.png";
+import img8 from "../../ServicesIcons/inwestycja.png";
+import img9 from "../../ServicesIcons/portfolio.png";
 import { useIntersection } from "react-use";
 
 const Services = ({ bgNotActive, bgActive }) => {

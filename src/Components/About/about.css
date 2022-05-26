@@ -8,7 +8,7 @@
 .about-container .left {
   width: 50%;
   height: 100%;
-  background-image: url(../Imgs/about.png);
+  background-image: url(../../Imgs/about.png);
   background-size: cover;
   background-position: center center;
 }

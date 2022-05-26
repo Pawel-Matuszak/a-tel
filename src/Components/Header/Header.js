@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { NavHashLink } from "react-router-hash-link";
 import "./header.css";
-import logo from "../Imgs/logo.png";
+import logo from "../../Imgs/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 function Header() {
   const [click, setClick] = useState(true);
-  const handleClick = () => setClick(!click);
   const [header, setHeader] = useState(false);
+  
+  const handleClick = () => setClick(!click);
   const changebackground = () => {
     if (window.scrollY >= 80) {
       setHeader(true);

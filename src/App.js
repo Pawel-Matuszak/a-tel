@@ -5,16 +5,16 @@ import {
   Route,
 } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop";
-import Footer from "./Components/Footer";
-import Contact from "./Components/Contact";
-import Map from "./Components/Map"
-import Header from "./Components/Header";
-import Hero from "./Components/Hero";
-import About from "./Components/About"
-import References from "./Components/References";
-import Equipment from "./Components/Equipment";
-import Gallery from "./Components/Gallery";
-import Services from "./Components/Services";
+import Footer from "./Components/Footer/Footer";
+import Contact from "./Components/Contact/Contact";
+import Map from "./Components/Map/Map"
+import Header from "./Components/Header/Header";
+import Hero from "./Components/Hero/Hero";
+import About from "./Components/About/About"
+import References from "./Components/References/References";
+import Equipment from "./Components/Equipment/Equipment";
+import Gallery from "./Components/Gallery/Gallery";
+import Services from "./Components/Services/Services";
 import gsap from "gsap"
 
 function App() {
@@ -47,7 +47,6 @@ function App() {
             <Contact bgNotActive={bgNotActive} bgActive={bgActive}/>
             <Map/>
           </Route>
-
         </Switch>
         <Footer/>
     </Router>
