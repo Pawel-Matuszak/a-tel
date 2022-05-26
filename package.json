@@ -18,12 +18,13 @@
     "react-dom": "^17.0.2",
     "react-leaflet": "^3.2.0",
     "react-native-fs": "^2.18.0",
-    "react-particles-js": "^3.5.3",
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "4.0.3",
+    "react-tsparticles": "^1.40.2",
     "react-use": "^17.2.4",
-    "tsparticles": "^1.31.1",
+    "tsparticles": "^1.43.1",
+    "tsparticles-engine": "^2.0.6",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
