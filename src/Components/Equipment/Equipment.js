@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useIntersection } from "react-use";
+import equipmentImg from "../../Imgs/equipment.png";
 import "./equipment.css";
 
 const Equipment = ({ bgNotActive, bgActive }) => {
@@ -17,11 +18,11 @@ const Equipment = ({ bgNotActive, bgActive }) => {
 
   return (
     <section className="equipment-container" id="nasz-sprzet" ref={equipment}>
-      <div className="right">
+      <div className="left">
         <div className="equipment-title">
           <h2 className="section-title">Sprzęt</h2>
-          <div class="rect rect1"></div>
-          <div class="rect rect2"></div>
+          <div className="rect rect1"></div>
+          <div className="rect rect2"></div>
         </div>
         <p className="section-content">
           Zadania są realizowane własnym nowoczesnym sprzętem. Posiadamy między
@@ -30,7 +31,9 @@ const Equipment = ({ bgNotActive, bgActive }) => {
           prac.
         </p>
       </div>
-      <div className="left"></div>
+      <div className="right">
+        <img src={equipmentImg} alt="equipment" />
+      </div>
     </section>
   );
 };

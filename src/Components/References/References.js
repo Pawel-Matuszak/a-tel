@@ -25,8 +25,8 @@ const References = ({ bgNotActive, bgActive }) => {
     <section className="references-container" id="referencje" ref={references}>
       <div className="references-title">
         <h2 className="section-title">Referencje</h2>
-        <div class="rect rect1"></div>
-        <div class="rect rect2"></div>
+        <div className="rect rect1"></div>
+        <div className="rect rect2"></div>
       </div>
       <div className="gallery-content references-recs">
         <Reference src={img1} />

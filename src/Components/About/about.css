@@ -8,18 +8,23 @@
 .about-container .left {
   width: 50%;
   height: 100%;
-  background-image: url(../../Imgs/about.png);
-  background-size: cover;
-  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-container .left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
 }
 .about-container .right {
   width: 50%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 2.5rem 10%;
+  margin: 3rem;
 }
 .about-container .right h1 {
   font-size: 4rem;
@@ -44,15 +49,17 @@
 
 @media screen and (max-width: 1200px) {
   .about-container {
+    height: auto;
     flex-direction: column;
   }
   .about-container .left {
     width: 100%;
-    height: 50%;
+    height: 450px;
   }
   .about-container .right {
     width: 100%;
     height: 50%;
     background-position: bottom;
+    padding: 1.5rem;
   }
 }

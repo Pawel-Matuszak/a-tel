@@ -7,25 +7,28 @@ const ParticlesConfig = () => {
   const [enableHover, setEnableHover] = useState(true);
 
   let timer;
-  function checkSize() {
+  const checkSize = () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
       setSize(window.innerWidth);
     }, 100);
-  }
+  };
 
-  useEffect(() => {
-    window.addEventListener("resize", checkSize);
-    if (size < 640) {
-      setEnableHover(false);
-    } else {
-      setEnableHover(true);
-    }
-    return () => {
-      window.removeEventListener("resize", checkSize);
-    };
-  }, [size]);
-  
+  useEffect(
+    (checkSize) => {
+      window.addEventListener("resize", checkSize);
+      if (size < 640) {
+        setEnableHover(false);
+      } else {
+        setEnableHover(true);
+      }
+      return () => {
+        window.removeEventListener("resize", checkSize);
+      };
+    },
+    [size]
+  );
+
   return (
     <Particles
       id="tsparticles"

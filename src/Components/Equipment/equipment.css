@@ -1,55 +1,66 @@
 .equipment-container {
   width: 100%;
-  min-height: calc(100vh - 90px);
+  height: calc(100vh - 90px);
   display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-  grid-template-rows: 1fr;
-  background-color: #052957;
-}
-.equipment-container .left {
-  background-image: url(../../Imgs/equipment.png);
-  background-size: cover;
-  background-position: center center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .equipment-container .right {
+  width: 50%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2.5rem 10%;
 }
-.equipment-container .right h1 {
+.equipment-container .right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+.equipment-container .left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem;
+}
+.equipment-container .left h1 {
   font-size: 4rem;
   position: relative;
   z-index: 10;
 }
-.equipment-container .right .equipment-title {
+.equipment-container .left .equipment-title {
   width: 100%;
   padding-left: 5%;
 }
-.equipment-container .right .equipment-title .rect {
+.equipment-container .left .equipment-title .rect {
   background-color: #02469e;
   width: 125px;
   height: 15px;
   position: relative;
   bottom: 2rem;
 }
-.equipment-container .right .equipment-title .rect2 {
+.equipment-container .left .equipment-title .rect2 {
   margin-left: 1rem;
   background-color: #1f63bc;
 }
 
 @media screen and (max-width: 1200px) {
   .equipment-container {
-    grid-auto-flow: row dense;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    height: auto;
+    flex-direction: column-reverse;
   }
   .equipment-container .right {
-    grid-row-start: 2;
+    width: 100%;
+    height: 450px;
   }
   .equipment-container .left {
-    background-position: bottom center;
+    width: 100%;
+    height: 50%;
+    background-position: bottom;
+    padding: 1.5rem;
   }
 }
