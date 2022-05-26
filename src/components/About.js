@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useIntersection } from "react-use";
-import "./About.css";
+import "./about.css";
 const About = ({ bgNotActive, bgActive }) => {
   const about = useRef(null);
 
