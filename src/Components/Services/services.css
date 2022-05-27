@@ -49,9 +49,10 @@
   max-width: 350px;
   text-align: center;
 }
-.icon-text h2 {
+.icon-text h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  font-weight: 400;
 }
 .icon {
   position: relative;

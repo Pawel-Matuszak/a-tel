@@ -12,7 +12,7 @@ const Gallery = () => {
   useEffect(() => {
     setImages(
       importAll(
-        require.context("../../ReferenceImgs/", false, /\.(png|jpe?g|svg)$/)
+        require.context("../../Imgs/ReferenceImgs/", false, /\.(png|jpe?g|svg)$/)
       )
     );
   }, []);
