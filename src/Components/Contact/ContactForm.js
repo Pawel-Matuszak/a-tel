@@ -54,6 +54,7 @@ const ContactForm = () => {
       });
 
       console.log(data);
+
       if (!data.status) {
         throw Object.assign(new Error("Wystąpił błąd komunikacji z serwerem"), {
           code: 402,
@@ -63,6 +64,7 @@ const ContactForm = () => {
       setLoading(false);
       setErrorMsg("");
     } catch (error) {
+      console.error(error)
       setErrorMsg("Wystąpił błąd, spróbuj ponownie poźniej");
       setLoading(false);
     }
