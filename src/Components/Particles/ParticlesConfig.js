@@ -7,12 +7,12 @@ const ParticlesConfig = () => {
   const [enableHover, setEnableHover] = useState(true);
 
   let timer;
-  function checkSize() {
+  const checkSize = () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
       setSize(window.innerWidth);
     }, 100);
-  }
+  };
 
   useEffect(() => {
     window.addEventListener("resize", checkSize);
@@ -25,7 +25,7 @@ const ParticlesConfig = () => {
       window.removeEventListener("resize", checkSize);
     };
   }, [size]);
-  
+
   return (
     <Particles
       id="tsparticles"

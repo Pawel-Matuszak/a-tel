@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useIntersection } from "react-use";
+import aboutImg from "../../Imgs/about.png";
 import "./about.css";
 const About = ({ bgNotActive, bgActive }) => {
   const about = useRef(null);
@@ -16,12 +17,14 @@ const About = ({ bgNotActive, bgActive }) => {
 
   return (
     <section className="about-container" id="o-nas" ref={about}>
-      <div className="left"></div>
+      <div className="left">
+        <img src={aboutImg} alt="about" />
+      </div>
       <div className="right">
         <div className="about-title">
           <h2 className="section-title">O nas</h2>
-          <div class="rect rect1"></div>
-          <div class="rect rect2"></div>
+          <div className="rect rect1"></div>
+          <div className="rect rect2"></div>
         </div>
         <p className="section-content">
           Działalność firmy rozpoczęła się w 2008 roku. Zostaliśmy wpisani do
@@ -32,7 +35,7 @@ const About = ({ bgNotActive, bgActive }) => {
           sprzęcie. Staż kadry kierowniczej oscyluje w 15 letnie doświadczenie w
           dziedzinie telekomunikacji. Każdy z pracowników posiada niezbędne
           umiejętności do realizacji inwestycji w branży światłowodowej. Swoją
-          ofertę kierujemy zarówno do Klientów indywidualnych, firm oraz
+          ofertę kierujemy zarówno do klientów indywidualnych, firm oraz
           przedsiębiorstw.
         </p>
       </div>

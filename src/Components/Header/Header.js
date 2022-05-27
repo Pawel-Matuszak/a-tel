@@ -7,7 +7,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 function Header() {
   const [click, setClick] = useState(true);
   const [header, setHeader] = useState(false);
-  
+
   const handleClick = () => setClick(!click);
   const changebackground = () => {
     if (window.scrollY >= 80) {
@@ -27,7 +27,9 @@ function Header() {
       <div className="header-container">
         <div className="nav">
           <div className="logo">
-            <img src={logo} alt="" />
+            <NavHashLink smooth to="/#">
+              <img src={logo} alt="a-tel logo" />
+            </NavHashLink>
           </div>
           <ul className={click ? "nav-links" : "nav-links active"}>
             <li onClick={handleClick}>

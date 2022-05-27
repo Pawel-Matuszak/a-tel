@@ -28,8 +28,8 @@ const Services = ({ bgNotActive, bgActive }) => {
     <section className="offer-container" id="nasze-uslugi" ref={services}>
       <div className="offer-title">
         <h2 className="section-title">Nasze usługi</h2>
-        <div class="rect rect1"></div>
-        <div class="rect rect2"></div>
+        <div className="rect rect1"></div>
+        <div className="rect rect2"></div>
       </div>
       <div className="icons-container">
         <div className="icon-circle-container">
