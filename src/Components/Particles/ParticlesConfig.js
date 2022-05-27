@@ -14,20 +14,17 @@ const ParticlesConfig = () => {
     }, 100);
   };
 
-  useEffect(
-    (checkSize) => {
-      window.addEventListener("resize", checkSize);
-      if (size < 640) {
-        setEnableHover(false);
-      } else {
-        setEnableHover(true);
-      }
-      return () => {
-        window.removeEventListener("resize", checkSize);
-      };
-    },
-    [size]
-  );
+  useEffect(() => {
+    window.addEventListener("resize", checkSize);
+    if (size < 640) {
+      setEnableHover(false);
+    } else {
+      setEnableHover(true);
+    }
+    return () => {
+      window.removeEventListener("resize", checkSize);
+    };
+  }, [size]);
 
   return (
     <Particles

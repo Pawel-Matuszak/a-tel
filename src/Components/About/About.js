@@ -35,7 +35,7 @@ const About = ({ bgNotActive, bgActive }) => {
           sprzęcie. Staż kadry kierowniczej oscyluje w 15 letnie doświadczenie w
           dziedzinie telekomunikacji. Każdy z pracowników posiada niezbędne
           umiejętności do realizacji inwestycji w branży światłowodowej. Swoją
-          ofertę kierujemy zarówno do Klientów indywidualnych, firm oraz
+          ofertę kierujemy zarówno do klientów indywidualnych, firm oraz
           przedsiębiorstw.
         </p>
       </div>
