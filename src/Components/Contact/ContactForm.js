@@ -6,7 +6,7 @@ const ContactForm = () => {
   //const
   const maxContentLength = 350;
   const maxTopicLength = 55;
-  const PATH = "http://127.0.0.1/index.php";
+  const PATH = "http://localhost:8000/";
 
   const [email, setEmail] = useState("");
   const [topic, setTopic] = useState("");
@@ -23,7 +23,7 @@ const ContactForm = () => {
     e.preventDefault();
     setLoading(true);
 
-    //If form has been filled correctly
+    // If form has been filled correctly
     if (email.length <= 0 || !email.includes("@")) {
       setErrorMsg("Proszę wpisać poprawny adres email");
       setMsgSend(false);
@@ -49,7 +49,7 @@ const ContactForm = () => {
       const { data } = await axios({
         method: "post",
         url: `${PATH}`,
-        headers: { "content-type": "application/json" },
+        headers: { "content-type": "application/json"},
         data: { email, topic, content },
       });
 
@@ -64,7 +64,6 @@ const ContactForm = () => {
       setLoading(false);
       setErrorMsg("");
     } catch (error) {
-      console.error(error)
       setErrorMsg("Wystąpił błąd, spróbuj ponownie poźniej");
       setLoading(false);
     }
@@ -111,7 +110,7 @@ const ContactForm = () => {
       <span className="error-msg">{errorMsg}</span>
       {loading && (
         <span className="loading-screen">
-          <div class="lds-ring">
+          <div className="lds-ring">
             <div></div>
             <div></div>
             <div></div>
