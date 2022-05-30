@@ -2,12 +2,22 @@ const express = require('express')
 const nodemailer = require("nodemailer")
 const {body, validationResult} = require("express-validator")
 const cors = require("cors")
+const path = require("path")
 require("dotenv").config()
 const app = express()
 const port = 8000
 
+
 app.use(cors());
 app.use(express.json());
+
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static("client/build"))
+
+  app.get("*", (req,res)=>{
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+  })
+}
 
 async function main({senderMail, topic, content}) {
   let transporter = nodemailer.createTransport({
