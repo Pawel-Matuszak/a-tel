@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import Button from "../Button/Button";
+import ReCAPTCHA from "react-google-recaptcha";
+
+require("dotenv").config({ path: "./../../../.env" });
 
 const ContactForm = () => {
   const maxContentLength = 350;
@@ -15,9 +18,24 @@ const ContactForm = () => {
   const [loading, setLoading] = useState(false);
   const [msgSend, setMsgSend] = useState(false);
 
+  const recaptchaRef = useRef();
+
+  const onChange = (value) => {
+    console.log(value);
+    setLoading(true);
+  };
+
+  const onErrored = () => {
+    console.log("Connection with reCaptcha server failed!");
+  };
+
+  const onExpired = () => {
+    console.log("reCaptcha expired!");
+  };
+
   const formSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    await recaptchaRef.current.executeAsync();
 
     if (email.length <= 0 || !email.includes("@")) {
       setErrorMsg("Proszę wpisać poprawny adres email");
@@ -44,7 +62,7 @@ const ContactForm = () => {
       const { data } = await axios({
         method: "post",
         url: `${PATH}`,
-        headers: { "content-type": "application/json"},
+        headers: { "content-type": "application/json" },
         data: { email, topic, content },
       });
 
@@ -116,7 +134,17 @@ const ContactForm = () => {
           Wiadomość wysłana
         </span>
       ) : (
-        <Button type="submit" content={"Wyślij"} link="#" />
+        <>
+          <Button type="submit" content={"Wyślij"} link="#" />
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            size="invisible"
+            sitekey={process.env.REACT_APP_CAPTCHA_PUBLIC_KEY}
+            onChange={onChange}
+            onErrored={onErrored}
+            onExpired={onExpired}
+          />
+        </>
       )}
     </form>
   );

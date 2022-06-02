@@ -53,16 +53,16 @@ const Footer = () => {
             <li>
               <FontAwesomeIcon className="fontAwesomeIcon" icon={faPhoneAlt} />
               <span>
-                <p>Asystentka:</p>{" "}
-                <a href="tel:+48 531 99 83 71">+48 531 99 83 71</a>
+                <p>Właściciel firmy:</p>{" "}
+                <a href="tel:+48 790 22 11 44">+48 790 22 11 44</a>
               </span>
             </li>
             <li>
               <FontAwesomeIcon className="fontAwesomeIcon" icon={faEnvelope} />
               <span>
-                <p>Asystentka:</p>{" "}
-                <a href="mailto:agnieszka.pierzga@a-tel.com.pl">
-                  agnieszka.pierzga@a-tel.com.pl
+                <p>Właściciel firmy:</p>{" "}
+                <a href="mailto:andrzej.borzek@a-tel.com.pl">
+                  andrzej.borzek@a-tel.com.pl
                 </a>
               </span>
             </li>
@@ -81,7 +81,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Wolności 99, 45-920 Opole
+                  Wolności 99A, 45-920 Opole
                 </a>
               </span>
             </li>
