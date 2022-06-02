@@ -1,0 +1,28 @@
+.gallery-container{
+  margin: 5rem auto;
+  width: 75vw;
+}
+
+.gallery-title{
+  text-align: center;
+  margin: 4rem 0;
+  font-size: 2.3rem;
+}
+
+.gallery-content{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+@media screen and ( max-width: 1050px) {
+  .gallery-content{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and ( max-width: 500px) {
+  .gallery-content{
+    grid-template-columns: 1fr;
+  }
+}

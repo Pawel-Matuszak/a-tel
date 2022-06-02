@@ -1,0 +1,152 @@
+/* Contact */
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: top;
+  font-size: 1.05rem;
+  min-height: 70vh;
+  font-weight: 600;
+}
+
+.contact-info {
+  padding: 6rem 2rem;
+}
+
+.contact-info-list li .fontAwesomeIcon {
+  font-size: 2.3rem;
+}
+
+.contact-info-list li {
+  margin: 1rem 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.contact-info-list li span p {
+  font-weight: 400;
+}
+
+.contact-info-list li a:hover {
+  color: #d4d3d3;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 6rem 0;
+  position: relative;
+}
+
+input,
+textarea {
+  width: 80%;
+  padding: 0.6rem 0.6rem;
+  margin: 0.6rem 0.5rem;
+  font-size: 1rem;
+  color: #707070;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  border: none;
+  outline: none;
+}
+
+button[type="submit"] {
+  margin: 0.8rem 0;
+}
+
+.textArea {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.charCount {
+  position: absolute;
+  top: 80%;
+  right: 13%;
+  z-index: 99;
+  color: #707070;
+}
+
+.error-msg {
+  color: #cc8719;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.success-msg {
+  color: #52cc2d;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem;
+}
+
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
+  z-index: 999;
+}
+
+/* Loading spinner */
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 904px) {
+  .contact-info {
+    padding: 2rem 2rem;
+  }
+
+  form {
+    padding: 2rem 0;
+  }
+}
