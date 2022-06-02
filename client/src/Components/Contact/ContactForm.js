@@ -3,7 +3,6 @@ import axios from "axios";
 import Button from "../Button/Button";
 
 const ContactForm = () => {
-  //const
   const maxContentLength = 350;
   const maxTopicLength = 55;
   const PATH = "http://localhost:8000/";
@@ -16,14 +15,10 @@ const ContactForm = () => {
   const [loading, setLoading] = useState(false);
   const [msgSend, setMsgSend] = useState(false);
 
-  //submit handler
-  //returns error if request failed to be sent
-  //disables send button if it was pressed once and request was send
   const formSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    // If form has been filled correctly
     if (email.length <= 0 || !email.includes("@")) {
       setErrorMsg("Proszę wpisać poprawny adres email");
       setMsgSend(false);
@@ -52,8 +47,6 @@ const ContactForm = () => {
         headers: { "content-type": "application/json"},
         data: { email, topic, content },
       });
-
-      console.log(data);
 
       if (!data.status) {
         throw Object.assign(new Error("Wystąpił błąd komunikacji z serwerem"), {

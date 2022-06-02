@@ -1,6 +1,6 @@
 const express = require('express')
 const nodemailer = require("nodemailer")
-const {body, validationResult} = require("express-validator")
+const {body} = require("express-validator")
 const cors = require("cors")
 const path = require("path")
 require("dotenv").config()
@@ -19,7 +19,7 @@ if(process.env.NODE_ENV === 'production'){
   })
 }
 
-async function main({senderMail, topic, content}) {
+async function main(senderMail, topic, content, res) {
   let transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
     port: 587,
@@ -33,14 +33,16 @@ async function main({senderMail, topic, content}) {
   });
 
   let info = await transporter.sendMail({
-    from: senderMail, 
-    to: "atelab@a-tel.com.pl", 
+    from: "Formularz kontaktowy", 
+    to: process.env.EMAIL_TO.split(' '), 
     subject: topic,
-    text: content, 
+    html: `
+      <b>Nadawca:</b> ${senderMail}<br>
+      <b>Temat:</b> ${topic}<br>
+      <b>Treść:</b> ${content}`, 
   });
 
-  // console.log("Message sent: %s", info.response);
-  // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+
   res.json({status: true})
 }
 
@@ -50,7 +52,7 @@ app.post(
   body("topic").notEmpty().trim().escape(), 
   body("content").notEmpty().trim().escape(),
   (req, res) => {
-    main(req.body).catch((err)=>{
+    main(req.body.email, req.body.topic, req.body.content, res).catch((err)=>{
       console.error(err)
       res.json({status: false})
     });
