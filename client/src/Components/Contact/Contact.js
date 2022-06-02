@@ -75,7 +75,7 @@ const Contact = ({ bgNotActive, bgActive }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Wolności 99, 45-920 Opole
+                  Wolności 99A, 45-920 Opole
                 </a>
               </span>
             </li>

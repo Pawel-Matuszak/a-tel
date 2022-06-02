@@ -31,6 +31,13 @@ iframe {
   display: none;
 }
 
+body iframe {
+  display: inline-block;
+}
+.grecaptcha-badge {
+  display: none !important;
+}
+
 .section-title {
   font-size: 2.5rem;
   position: relative;

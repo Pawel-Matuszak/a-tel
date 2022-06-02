@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import Button from "../Button/Button";
+import ReCAPTCHA from "react-google-recaptcha";
+
+require("dotenv").config({ path: "./../../../.env" });
 
 const ContactForm = () => {
-  //const
   const maxContentLength = 350;
   const maxTopicLength = 55;
-  const PATH = "http://127.0.0.1/index.php";
+  const PATH = "http://localhost:8000/";
 
   const [email, setEmail] = useState("");
   const [topic, setTopic] = useState("");
@@ -16,14 +18,25 @@ const ContactForm = () => {
   const [loading, setLoading] = useState(false);
   const [msgSend, setMsgSend] = useState(false);
 
-  //submit handler
-  //returns error if request failed to be sent
-  //disables send button if it was pressed once and request was send
+  const recaptchaRef = useRef();
+
+  const onChange = (value) => {
+    console.log(value);
+    setLoading(true);
+  };
+
+  const onErrored = () => {
+    console.log("Connection with reCaptcha server failed!");
+  };
+
+  const onExpired = () => {
+    console.log("reCaptcha expired!");
+  };
+
   const formSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    await recaptchaRef.current.executeAsync();
 
-    //If form has been filled correctly
     if (email.length <= 0 || !email.includes("@")) {
       setErrorMsg("Proszę wpisać poprawny adres email");
       setMsgSend(false);
@@ -53,8 +66,6 @@ const ContactForm = () => {
         data: { email, topic, content },
       });
 
-      console.log(data);
-
       if (!data.status) {
         throw Object.assign(new Error("Wystąpił błąd komunikacji z serwerem"), {
           code: 402,
@@ -64,7 +75,6 @@ const ContactForm = () => {
       setLoading(false);
       setErrorMsg("");
     } catch (error) {
-      console.error(error)
       setErrorMsg("Wystąpił błąd, spróbuj ponownie poźniej");
       setLoading(false);
     }
@@ -111,7 +121,7 @@ const ContactForm = () => {
       <span className="error-msg">{errorMsg}</span>
       {loading && (
         <span className="loading-screen">
-          <div class="lds-ring">
+          <div className="lds-ring">
             <div></div>
             <div></div>
             <div></div>
@@ -124,7 +134,17 @@ const ContactForm = () => {
           Wiadomość wysłana
         </span>
       ) : (
-        <Button type="submit" content={"Wyślij"} link="#" />
+        <>
+          <Button type="submit" content={"Wyślij"} link="#" />
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            size="invisible"
+            sitekey={process.env.REACT_APP_CAPTCHA_PUBLIC_KEY}
+            onChange={onChange}
+            onErrored={onErrored}
+            onExpired={onExpired}
+          />
+        </>
       )}
     </form>
   );
