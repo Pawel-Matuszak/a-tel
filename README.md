@@ -1,4 +1,4 @@
-# ![App logo](./client/src/res/logo.png) A-TEL Andrzej Borzek
+# ![App logo](./client/public/logo.png) A-TEL Andrzej Borzek
 
 ## Description
 
