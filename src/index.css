@@ -31,7 +31,7 @@ iframe {
   display: none;
 }
 
-body iframe {
+body div div iframe {
   display: inline-block;
 }
 .grecaptcha-badge {
