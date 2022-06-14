@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import Button from "../Button/Button";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactForm = () => {
-  //const
   const maxContentLength = 350;
   const maxTopicLength = 55;
   const PATH = "http://127.0.0.1/index.php";
@@ -16,21 +16,24 @@ const ContactForm = () => {
   const [loading, setLoading] = useState(false);
   const [msgSend, setMsgSend] = useState(false);
 
-  //submit handler
-  //returns error if request failed to be sent
-  //disables send button if it was pressed once and request was send
+  const recaptchaRef = useRef();
+
+  const onExpired = () => {return 0};
+
+  const onChange = (value) => {
+    setLoading(true);
+  };
+
   const formSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
-
-    //If form has been filled correctly
+    
     if (email.length <= 0 || !email.includes("@")) {
       setErrorMsg("Proszę wpisać poprawny adres email");
       setMsgSend(false);
       setLoading(false);
       return;
     }
-
+    
     if (topic.length <= 0 || topic.length > maxTopicLength) {
       setErrorMsg("Proszę wpisać temat wiadomości");
       setMsgSend(false);
@@ -44,27 +47,27 @@ const ContactForm = () => {
       setLoading(false);
       return;
     }
+    await recaptchaRef.current.executeAsync();
 
     try {
-      const { data } = await axios({
+      const {data} = await axios({
         method: "post",
         url: `${PATH}`,
         headers: { "content-type": "application/json" },
         data: { email, topic, content },
       });
 
-      console.log(data);
-
-      if (!data.status) {
+      if (!data) {
         throw Object.assign(new Error("Wystąpił błąd komunikacji z serwerem"), {
           code: 402,
         });
       }
-      setMsgSend(data.status);
+
+      setMsgSend(true);
       setLoading(false);
       setErrorMsg("");
+
     } catch (error) {
-      console.error(error)
       setErrorMsg("Wystąpił błąd, spróbuj ponownie poźniej");
       setLoading(false);
     }
@@ -111,7 +114,7 @@ const ContactForm = () => {
       <span className="error-msg">{errorMsg}</span>
       {loading && (
         <span className="loading-screen">
-          <div class="lds-ring">
+          <div className="lds-ring">
             <div></div>
             <div></div>
             <div></div>
@@ -124,10 +127,19 @@ const ContactForm = () => {
           Wiadomość wysłana
         </span>
       ) : (
-        <Button type="submit" content={"Wyślij"} link="#" />
+        <>
+          <Button type="submit" content={"Wyślij"} link="#" />
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            size="invisible"
+            sitekey={process.env.REACT_APP_CAPTCHA_PUBLIC_KEY}
+            onChange={onChange}
+            onExpired={onExpired}
+          />
+        </>
       )}
-    </form>
-  );
-};
-
+      </form>
+    );
+  };
+  
 export default ContactForm;
