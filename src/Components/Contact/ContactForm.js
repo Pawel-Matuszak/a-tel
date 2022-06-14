@@ -3,12 +3,10 @@ import axios from "axios";
 import Button from "../Button/Button";
 import ReCAPTCHA from "react-google-recaptcha";
 
-require("dotenv").config({ path: "./../../../.env" });
-
 const ContactForm = () => {
   const maxContentLength = 350;
   const maxTopicLength = 55;
-  const PATH = "http://localhost:8000/";
+  const PATH = "http://127.0.0.1/index.php";
 
   const [email, setEmail] = useState("");
   const [topic, setTopic] = useState("");
@@ -20,30 +18,22 @@ const ContactForm = () => {
 
   const recaptchaRef = useRef();
 
+  const onExpired = () => {return 0};
+
   const onChange = (value) => {
-    console.log(value);
     setLoading(true);
-  };
-
-  const onErrored = () => {
-    console.log("Connection with reCaptcha server failed!");
-  };
-
-  const onExpired = () => {
-    console.log("reCaptcha expired!");
   };
 
   const formSubmit = async (e) => {
     e.preventDefault();
-    await recaptchaRef.current.executeAsync();
-
+    
     if (email.length <= 0 || !email.includes("@")) {
       setErrorMsg("Proszę wpisać poprawny adres email");
       setMsgSend(false);
       setLoading(false);
       return;
     }
-
+    
     if (topic.length <= 0 || topic.length > maxTopicLength) {
       setErrorMsg("Proszę wpisać temat wiadomości");
       setMsgSend(false);
@@ -57,23 +47,26 @@ const ContactForm = () => {
       setLoading(false);
       return;
     }
+    await recaptchaRef.current.executeAsync();
 
     try {
-      const { data } = await axios({
+      const {data} = await axios({
         method: "post",
         url: `${PATH}`,
         headers: { "content-type": "application/json" },
         data: { email, topic, content },
       });
 
-      if (!data.status) {
+      if (!data) {
         throw Object.assign(new Error("Wystąpił błąd komunikacji z serwerem"), {
           code: 402,
         });
       }
-      setMsgSend(data.status);
+
+      setMsgSend(true);
       setLoading(false);
       setErrorMsg("");
+
     } catch (error) {
       setErrorMsg("Wystąpił błąd, spróbuj ponownie poźniej");
       setLoading(false);
@@ -141,7 +134,6 @@ const ContactForm = () => {
             size="invisible"
             sitekey={process.env.REACT_APP_CAPTCHA_PUBLIC_KEY}
             onChange={onChange}
-            onErrored={onErrored}
             onExpired={onExpired}
           />
         </>
