@@ -93,7 +93,7 @@ const Footer = () => {
             Głównym przedmiotem działalności firmy jest budowa linii
             światłowodowych. Firma swoją pracę opiera na doświadczonej kadrze
             pracowników oraz nowoczesnej technologii i sprzęcie. Staż kadry
-            kierowniczej oscyluje w 15 letnie doświadczenie w dziedzinie
+            kierowniczej oscyluje w 15-letnie doświadczenie w dziedzinie
             telekomunikacji.
           </p>
         </div>
