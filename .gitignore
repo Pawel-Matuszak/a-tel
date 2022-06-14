@@ -10,6 +10,8 @@
 /build
 
 # misc
+.vscode
+server/vendor
 .env
 /server/.env
 /server/vendor

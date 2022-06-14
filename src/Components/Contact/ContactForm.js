@@ -138,8 +138,8 @@ const ContactForm = () => {
           />
         </>
       )}
-    </form>
-  );
-};
-
+      </form>
+    );
+  };
+  
 export default ContactForm;
