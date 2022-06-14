@@ -32,7 +32,7 @@ const About = ({ bgNotActive, bgActive }) => {
           budowy sieci telekomunikacyjnej. Głównym przedmiotem działalności
           firmy jest budowa linii światłowodowych. Firma swoją pracę opiera na
           doświadczonej kadrze pracowników oraz nowoczesnej technologii i
-          sprzęcie. Staż kadry kierowniczej oscyluje w 15 letnie doświadczenie w
+          sprzęcie. Staż kadry kierowniczej oscyluje w 15-letnie doświadczenie w
           dziedzinie telekomunikacji. Każdy z pracowników posiada niezbędne
           umiejętności do realizacji inwestycji w branży światłowodowej. Swoją
           ofertę kierujemy zarówno do klientów indywidualnych, firm oraz
